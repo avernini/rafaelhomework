@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MÉTODO FALA – Hotel Booking Homework: Practice &amp; Writing</title>
+<!-- Tailwind CSS & Phosphor Icons para Consistência Visual Premium -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://unpkg.com/@phosphor-icons/web"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          deepBlue: '#0F172A',      /* Dark UI Header Block */
+          bodyLight: '#F8FAFC',     /* Workspace body background */
+          orangeAction: '#C2410C',  /* Primary brand accent */
+          orangeHover: '#EA580C',   /* Hover color states */
+          darkSlate: '#334155',
+          softSand: '#F1F5F9',
+          greenSoft: '#E8F8EF',
+          redSoft: '#FDEAEA',
+          amberSoft: '#FEF3D7'
+        }
+      }
+    }
+  }
+</script>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght=300;400;500;600;700&family=IBM+Plex+Mono:wght=400;600&display=swap');
+  body { font-family: 'Inter', sans-serif; }
+  .mono { font-family: 'IBM Plex Mono', monospace; }
+  .section { display: none; animation: fadeUp .35s ease; }
+  .section.active { display: block; }
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+</style>
+</head>
+<body class="bg-deepBlue text-darkSlate min-h-screen text-[18px] antialiased">
+
+<!-- ── STANDARDIZED METHOD FALA HEADER ── -->
+<header class="bg-deepBlue sticky top-0 z-50 border-b border-slate-800 shadow-md">
+  <div class="max-w-[960px] mx-auto px-6 py-5 flex items-center justify-between gap-4">
+    
+    <div class="flex items-center gap-3">
+      <div class="flex-shrink-0">
+        <button onclick="resetHomework()" class="cursor-pointer hover:opacity-80 transition-opacity select-none text-left focus:outline-none">
+          <span class="text-white font-bold tracking-wider text-lg mono">MÉTODO <span class="text-orangeAction">FALA</span></span>
+        </button>
+      </div>
+      <div class="h-6 w-[1px] bg-slate-700 hidden sm:block"></div>
+      <div class="hidden sm:block">
+        <h1 class="text-base font-bold text-white tracking-wide">Hotel Booking Homework</h1>
+        <p class="text-xs text-slate-400">Easy Practice · Comparisons &amp; Telephone Task</p>
+      </div>
+    </div>
+
+    <!-- Progress Tracker Linear Layout -->
+    <div class="flex items-center gap-3">
+      <span class="text-xs font-semibold text-slate-400 uppercase tracking-wider mono" id="progressLabel">Step 1 / 5</span>
+      <div class="w-24 sm:w-32 h-2.5 bg-slate-800 rounded-full overflow-hidden border border-slate-700">
+        <div class="h-full bg-orangeAction rounded-full transition-all duration-500" id="progressFill" style="width:20%"></div>
+      </div>
+    </div>
+
+  </div>
+</header>
+
+<!-- MAIN CONTENT WORKSPACE -->
+<div class="bg-bodyLight w-full min-h-[calc(100vh-73px)]">
+  <main class="max-w-[960px] mx-auto px-6 py-8 pb-24">
+
+    <!-- ── LINK DIRETO PARA AULA PRINCIPAL (HEADER LINK CARD) ── -->
+    <div class="w-full bg-slate-900 text-white rounded-xl p-4 mb-8 flex items-center justify-between gap-4 shadow-sm border border-slate-800">
+      <div class="flex items-center gap-3">
+        <div class="p-2 bg-slate-800 rounded-lg text-xl text-orangeAction"><i class="ph ph-briefcase"></i></div>
+        <div>
+          <h4 class="text-sm font-bold">Need to review the Comparatives class?</h4>
+          <p class="text-xs text-slate-400">Check the adjectives framework and teacher prompts before starting your homework.</p>
+        </div>
+      </div>
+      <a href="place_order.html" class="bg-orangeAction hover:bg-orangeHover text-white font-bold text-xs uppercase px-4 py-2.5 rounded-lg transition-colors shadow-xs flex items-center gap-1">
+        Open Lesson <i class="ph ph-arrow-square-out"></i>
+      </a>
+    </div>
+
+    <!-- ═══════════════════════════════════════════
+         STEP 1 – VOCABULARY CHECK
+    ═══════════════════════════════════════════ -->
+    <div class="section active" id="sec1">
+      <span class="inline-block text-xs font-bold tracking-widest text-orangeAction uppercase bg-orange-50 px-3 py-1 rounded-full mb-4 border border-orange-100">Step 1: Words Practice (3 min)</span>
+      
+      <h2 class="text-3xl font-bold text-deepBlue mb-2 leading-tight">Hotel Selection Vocabulary</h2>
+      <p class="text-base text-slate-500 mb-8 leading-relaxed">Let's check your adjective structures. Read the hotel room scenarios and choose the correct option:</p>
+
+      <div class="space-y-4 mb-8">
+        <!-- Pergunta 1 -->
+        <div class="bg-white border border-slate-200 rounded-xl p-5 shadow-sm space-y-3" id="vocab-q-0">
+          <p class="text-base font-semibold text-slate-800">1. The Suite has a king bed and a balcony, but the Standard room is very small. The Suite is ______ the Standard room.</p>
+          <div class="flex flex-wrap gap-2.5 text-sm font-mono">
+            <button onclick="selectVocabMatch(0, 'more small than', this)" class="vocab-btn bg-white border border-slate-200 p-3 rounded-lg hover:border-orangeAction transition-all">more small than</button>
+            <button onclick="selectVocabMatch(0, 'bigger than', this)" class="vocab-btn bg-white border border-slate-200 p-3 rounded-lg hover:border-orangeAction transition-all">bigger than</button>
+            <button onclick="selectVocabMatch(0, 'big than', this)" class="vocab-btn bg-white border border-slate-200 p-3 rounded-lg hover:border-orangeAction transition-all">big than</button>
+          </div>
+        </div>
+
+        <!-- Pergunta 2 -->
+        <div class="bg-white border border-slate-200 rounded-xl p-5 shadow-sm space-y-3" id="vocab-q-1">
+          <p class="text-base font-semibold text-slate-800">2. The Presidential room costs $500 per night, and the Basic room costs only $80. The Presidential room is ______ the Basic room.</p>
+          <div class="flex flex-wrap gap-2.5 text-sm font-mono">
+            <button onclick="selectVocabMatch(1, 'more expensive than', this)" class="vocab-btn bg-white border border-slate-200 p-3 rounded-lg hover:border-orangeAction transition-all">more expensive than</button>
+            <button onclick="selectVocabMatch(1, 'expensiver than', this)" class="vocab-btn bg-white border border-slate-200 p-3 rounded-lg hover:border-orangeAction transition-all">expensiver than</button>
+            <button onclick="selectVocabMatch(1, 'cheaper than', this)" class="vocab-btn bg-white border border-slate-200 p-3 rounded-lg hover:border-orangeAction transition-all">cheaper than</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="vocab-feedback-msg" class="hidden mb-6 p-4 rounded-lg font-semibold text-center text-sm"></div>
+
+      <div class="flex justify-end">
+        <button class="bg-orangeAction hover:bg-orangeHover text-white font-semibold px-7 py-3.5 rounded-lg flex items-center gap-2 transition-colors shadow-sm text-base" onclick="goTo(2)">Next: Price Check <i class="ph ph-arrow-right"></i></button>
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════
+         STEP 2 – GRAMMAR CHECK
+    ═══════════════════════════════════════════ -->
+    <div class="section" id="sec2">
+      <span class="inline-block text-xs font-bold tracking-widest text-orangeAction uppercase bg-orange-50 px-3 py-1 rounded-full mb-3 border border-orange-100">Step 2: Grammar Practice (3 min)</span>
+      <h2 class="text-3xl font-bold text-deepBlue mb-2">Rates &amp; Quality Parameters</h2>
+      <p class="text-slate-500 mb-8 leading-relaxed">Choose the best option to complete the comparison sentences correctly without mixing the rules:</p>
+
+      <div class="bg-white border border-slate-200 rounded-xl p-6 mb-8 space-y-4">
+        <!-- Questão Gramática 1 -->
+        <div class="p-4 bg-slate-50 rounded-lg flex flex-col md:flex-row md:items-center justify-between gap-3" id="gram-q-0">
+          <p class="font-medium text-slate-800 text-base">1. The motel is near the highway, but the central hotel location is much _____ for tourists.</p>
+          <div class="flex gap-2 text-sm font-semibold">
+            <button onclick="selectGrammarMatch(0, 'more good than', this)" class="gram-btn bg-white border border-slate-200 px-4 py-2 rounded-lg hover:border-orangeAction transition-all">more good than</button>
+            <button onclick="selectGrammarMatch(0, 'better', this)" class="gram-btn bg-white border border-slate-200 px-4 py-2 rounded-lg hover:border-orangeAction transition-all">better</button>
+          </div>
+        </div>
+
+        <!-- Questão Gramática 2 -->
+        <div class="p-4 bg-slate-50 rounded-lg flex flex-col md:flex-row md:items-center justify-between gap-3" id="gram-q-1">
+          <p class="font-medium text-slate-800 text-base">2. Hostel rooms are cheap, but hotel rooms are always _____ and more comfortable.</p>
+          <div class="flex gap-2 text-sm font-semibold">
+            <button onclick="selectGrammarMatch(1, 'quieter', this)" class="gram-btn bg-white border border-slate-200 px-4 py-2 rounded-lg hover:border-orangeAction transition-all">quieter</button>
+            <button onclick="selectGrammarMatch(1, 'more quiet', this)" class="gram-btn bg-white border border-slate-200 px-4 py-2 rounded-lg hover:border-orangeAction transition-all">more quiet</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="grammar-feedback-msg" class="hidden mb-6 p-4 rounded-lg font-semibold text-center text-sm"></div>
+
+      <div class="flex justify-between items-center">
+        <button class="bg-white hover:bg-slate-100 text-deepBlue font-medium px-5 py-3.5 rounded-lg border border-slate-200 flex items-center gap-2 transition-colors text-base" onclick="goTo(1)"><i class="ph ph-arrow-left"></i> Back</button>
+        <button class="bg-orangeAction hover:bg-orangeHover text-white font-semibold px-7 py-3.5 rounded-lg flex items-center gap-2 transition-colors shadow-sm text-base" onclick="goTo(3)">Next: Writing Space <i class="ph ph-arrow-right"></i></button>
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════
+         STEP 3 – INTEGRATED WRITING WORKSPACE (GOOGLE DOCS IFRAME)
+    ═══════════════════════════════════════════ -->
+    <div class="section" id="sec3">
+      <span class="inline-block text-xs font-bold tracking-widest text-orangeAction uppercase bg-orange-50 px-3 py-1 rounded-full mb-3 border border-orange-100">Step 3: Writing Task (7 min)</span>
+      <h2 class="text-3xl font-bold text-deepBlue mb-2">The Hotel Upgrade Request</h2>
+      <p class="text-slate-500 mb-6 leading-relaxed">
+        <span class="font-bold text-slate-700">Your Task:</span> Write a short message (40-60 words) to the hotel manager. 
+        Explain that your current standard room is smaller or slower for Wi-Fi, and request an upgrade to a better room. Use at least three comparative adjetives.
+      </p>
+
+      <!-- INTEGRATED GOOGLE DOCS IFRAME WORKSPACE -->
+      <div class="w-full bg-white rounded-xl border border-slate-200 shadow-md p-4 mb-6">
+        <div class="flex items-center justify-between border-b pb-3 mb-4">
+          <div class="flex items-center gap-2">
+            <span class="text-xl">📝</span>
+            <strong class="text-deepBlue text-base uppercase tracking-wider font-mono">Google Document Space</strong>
+          </div>
+          <span class="text-xs bg-orange-50 border border-orange-100 text-orangeAction px-2 py-0.5 rounded font-bold font-mono">Live Document</span>
+        </div>
+
+        <!-- RESPONSIVE EMBED CONTAINER -->
+        <div class="w-full aspect-[4/5] sm:aspect-[16/10] rounded-lg overflow-hidden border border-slate-200 bg-slate-100 relative">
+          <iframe class="w-full h-full absolute top-0 left-0" 
+                  src="https://docs.google.com/document/d/1g2bL9C5Vw0kE5qKAn6Z8w4dD_hG-Lw_X5Z_gN8Bv-qM/edit?usp=sharing" 
+                  frameborder="0" 
+                  allowfullscreen></iframe>
+        </div>
+        
+        <p class="text-xs text-slate-400 mt-3 font-medium italic">
+          *Note: If the document doesn't load instantly, please check your internet connection or use your personal Google link folder.
+        </p>
+      </div>
+
+      <!-- INSTRUCTOR COMPLIANCE CHECK FOR TIMELINE -->
+      <div class="bg-white border border-slate-200 rounded-xl p-5 mb-6 flex justify-between items-center shadow-sm">
+        <div class="flex gap-3 items-center">
+          <div class="p-2 bg-slate-100 rounded-lg text-lg"><i class="ph ph-check-square text-orangeAction"></i></div>
+          <div>
+            <h4 class="text-xs font-bold text-deepBlue">Writing Confirmation</h4>
+            <p class="text-[11px] text-slate-500">Check this box when you finish writing your text inside the document.</p>
+          </div>
+        </div>
+        <label class="flex items-center gap-2 cursor-pointer select-none">
+          <input type="checkbox" id="essay-check" onchange="toggleStep4Button()" class="rounded border-slate-300 text-orangeAction focus:ring-orangeAction w-4 h-4">
+          <span class="text-xs font-bold text-slate-600 uppercase">Finished</span>
+        </label>
+      </div>
+
+      <div class="flex justify-between items-center">
+        <button class="bg-white hover:bg-slate-100 text-deepBlue font-medium px-5 py-3.5 rounded-lg border border-slate-200 flex items-center gap-2 transition-colors text-base" onclick="goTo(2)"><i class="ph ph-arrow-left"></i> Back</button>
+        <button id="btn-to-step4" class="bg-orangeAction hover:bg-orangeHover text-white font-semibold px-7 py-3.5 rounded-lg hidden items-center gap-2 transition-colors shadow-sm text-base" onclick="goTo(4)">Next: Phone Simulator <i class="ph ph-arrow-right"></i></button>
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════
+         STEP 4 – PHONE RESERVATION SIMULATOR (EM BLOCOS INDEPENDENTES)
+    ═══════════════════════════════════════════ -->
+    <div class="section" id="sec4">
+      <span class="inline-block text-xs font-bold tracking-widest text-orangeAction uppercase bg-orange-50 px-3 py-1 rounded-full mb-3 border border-orange-100">Step 4: Phone Simulation (10 min)</span>
+      <h2 class="text-2xl font-bold text-deepBlue mb-2">Telephone Booking Interaction</h2>
+      <p class="text-slate-500 mb-6 text-sm leading-relaxed">Simulate a real phone call reservation block by block. Listen to the hotel receptionist, record your response, track your quality checkpoint, and click Next Block:</p>
+
+      <!-- CARD CONTAINER CENTRAL DO SIMULADOR -->
+      <div class="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm mb-6 space-y-6">
+        
+        <!-- BLOCO 1 (ATIVO POR PADRÃO) -->
+        <div id="phone-block-1" class="space-y-3 border-l-4 border-orangeAction pl-4 py-1 transition-all">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-bold font-mono text-orangeAction uppercase">Block 1: Initial Greeting</span>
+            <div class="flex gap-1">
+              <button onclick="playPhonePrompt('prompt-txt-1', this)" class="w-7 h-7 bg-orange-50 text-orangeAction border border-orange-200 rounded flex items-center justify-center hover:bg-orangeAction hover:text-white transition-all text-xs"><i class="ph-bold ph-play"></i></button>
+            </div>
+          </div>
+          <p id="prompt-txt-1" class="text-xs text-slate-700 bg-slate-50 p-3 rounded italic font-medium leading-relaxed">
+            "Grand Central Hotel, good afternoon! How can I help you today?"
+          </p>
+          <div class="bg-slate-900 rounded-lg p-3 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs">
+            <div class="text-center sm:text-left">
+              <span class="text-slate-400 block text-[10px] font-mono">YOUR RESPONSE TARGET:</span>
+              <p class="text-white font-medium italic">"Hello! I want to book a double room for next weekend, please."</p>
+            </div>
+            <button onclick="startMicrophoneCapture(1, 'status-b1', this)" class="px-4 py-2 bg-orangeAction hover:bg-orangeHover text-white rounded-lg font-mono text-[11px] uppercase font-bold flex items-center gap-1 shrink-0">
+              <i class="ph-bold ph-microphone"></i> Record Response
+            </button>
+          </div>
+          <div class="flex justify-between items-center text-[11px] font-mono">
+            <span id="status-b1" class="text-slate-400">Microphone: Standby</span>
+            <button onclick="advancePhoneBlock(2)" id="next-b1" class="hidden text-orangeAction font-bold uppercase hover:underline">Next Block <i class="ph ph-arrow-down"></i></button>
+          </div>
+        </div>
+
+        <!-- BLOCO 2 (OCULTO) -->
+        <div id="phone-block-2" class="hidden opacity-40 space-y-3 border-l-4 border-slate-300 pl-4 py-1 transition-all">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-bold font-mono text-slate-400 uppercase" id="lbl-b2">Block 2: Rate Comparison</span>
+            <div class="flex gap-1">
+              <button onclick="playPhonePrompt('prompt-txt-2', this)" id="play-b2" disabled class="w-7 h-7 bg-slate-100 text-slate-400 border rounded flex items-center justify-center text-xs"><i class="ph-bold ph-play"></i></button>
+            </div>
+          </div>
+          <p id="prompt-txt-2" class="text-xs text-slate-700 bg-slate-50 p-3 rounded italic font-medium leading-relaxed">
+            "Perfect. We have a standard room for one hundred dollars, and a deluxe room for two hundred dollars. Which one do you prefer?"
+          </p>
+          <div class="bg-slate-900 rounded-lg p-3 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs">
+            <div class="text-center sm:text-left">
+              <span class="text-slate-400 block text-[10px] font-mono">YOUR RESPONSE TARGET:</span>
+              <p class="text-white font-medium italic">"The standard room is cheaper than the deluxe room. I choose the standard room, please."</p>
+            </div>
+            <button onclick="startMicrophoneCapture(2, 'status-b2', this)" id="mic-b2" disabled class="px-4 py-2 bg-slate-200 text-slate-400 rounded-lg font-mono text-[11px] uppercase font-bold flex items-center gap-1 shrink-0 cursor-not-allowed">
+              <i class="ph-bold ph-microphone"></i> Record Response
+            </button>
+          </div>
+          <div class="flex justify-between items-center text-[11px] font-mono">
+            <span id="status-b2" class="text-slate-400">Block locked</span>
+            <button onclick="advancePhoneBlock(3)" id="next-b2" class="hidden text-orangeAction font-bold uppercase hover:underline">Next Block <i class="ph ph-arrow-down"></i></button>
+          </div>
+        </div>
+
+        <!-- BLOCO 3 (OCULTO) -->
+        <div id="phone-block-3" class="hidden opacity-40 space-y-3 border-l-4 border-slate-300 pl-4 py-1 transition-all">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-bold font-mono text-slate-400 uppercase" id="lbl-b3">Block 3: Confirmation</span>
+            <div class="flex gap-1">
+              <button onclick="playPhonePrompt('prompt-txt-3', this)" id="play-b3" disabled class="w-7 h-7 bg-slate-100 text-slate-400 border rounded flex items-center justify-center text-xs"><i class="ph-bold ph-play"></i></button>
+            </div>
+          </div>
+          <p id="prompt-txt-3" class="text-xs text-slate-700 bg-slate-50 p-3 rounded italic font-medium leading-relaxed">
+            "Excellent choice. The standard room is smaller, but it is very comfortable. Your reservation is complete. See you next weekend!"
+          </p>
+          <div class="bg-slate-900 rounded-lg p-3 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs">
+            <div class="text-center sm:text-left">
+              <span class="text-slate-400 block text-[10px] font-mono">YOUR RESPONSE TARGET:</span>
+              <p class="text-white font-medium italic">"Thank you very much for your help! Have a great afternoon. Goodbye!"</p>
+            </div>
+            <button onclick="startMicrophoneCapture(3, 'status-b3', this)" id="mic-b3" disabled class="px-4 py-2 bg-slate-200 text-slate-400 rounded-lg font-mono text-[11px] uppercase font-bold flex items-center gap-1 shrink-0 cursor-not-allowed">
+              <i class="ph-bold ph-microphone"></i> Record Response
+            </button>
+          </div>
+          <div class="flex justify-between items-center text-[11px] font-mono">
+            <span id="status-b3" class="text-slate-400">Block locked</span>
+            <span id="completion-flag" class="hidden text-emerald-600 font-bold uppercase tracking-wider animate-pulse">✓ Simulation Sealed</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- AUTO-AVALIAÇÃO DE PRONÚNCIA E FLUIDEZ DO TELEFONE -->
+      <div class="bg-white border border-slate-200 rounded-xl p-4 shadow-sm font-mono text-xs space-y-3 mb-6">
+        <span class="text-orangeAction font-bold block uppercase text-[9px]">Pronunciation Quality Tracking Checklist</span>
+        <div class="space-y-1.5 font-sans text-slate-600">
+          <label class="flex items-start gap-2 cursor-pointer select-none">
+            <input type="checkbox" id="chk-ph-1" onchange="calculateOutlineReadiness()" class="mt-0.5 rounded text-orangeAction focus:ring-orangeAction border-slate-300 w-3.5 h-3.5">
+            <span>I pronounced the short comparative ending correctly (e.g. *cheaper than*, *smaller*).</span>
+          </label>
+          <label class="flex items-start gap-2 cursor-pointer select-none">
+            <input type="checkbox" id="chk-ph-2" onchange="calculateOutlineReadiness()" class="mt-0.5 rounded text-orangeAction focus:ring-orangeAction border-slate-300 w-3.5 h-3.5">
+            <span>I avoided saying *more cheap* or *more small* during my telephone voice responses.</span>
+          </label>
+        </div>
+      </div>
+
+      <!-- Barra de Prontidão de Argumento Reativa -->
+      <div class="bg-white border border-slate-200 rounded-xl p-4 shadow-sm mb-6">
+        <div class="flex justify-between text-xs font-bold text-slate-600 mb-1">
+          <span>RESERVATION SIMULATION PROGRESS</span>
+          <span id="outline-score-lbl">0%</span>
+        </div>
+        <div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden">
+          <div id="outline-bar-fill" class="bg-orangeAction h-full transition-all duration-300" style="width: 0%"></div>
+        </div>
+      </div>
+
+      <div class="flex justify-between items-center">
+        <button class="bg-white hover:bg-slate-100 text-deepBlue font-medium px-5 py-3.5 rounded-lg border border-slate-200 flex items-center gap-2 transition-colors text-base" onclick="goTo(3)"><i class="ph ph-arrow-left"></i> Back</button>
+        <button class="bg-orangeAction hover:bg-orangeHover text-white font-semibold px-7 py-3.5 rounded-lg flex items-center gap-2 transition-colors shadow-sm text-base" onclick="goTo(5)">Next: Save Homework <i class="ph ph-arrow-right"></i></button>
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════
+         STEP 5 – SUBMISSION LAB COMPILATION
+    ═══════════════════════════════════════════ -->
+    <div class="section" id="sec5">
+      <span class="inline-block text-xs font-bold tracking-widest text-emerald-700 uppercase bg-emerald-50 px-3 py-1 rounded-full mb-3 border border-emerald-100">Step 5: Finish Work (1 min)</span>
+      <h2 class="text-3xl font-bold text-deepBlue mb-2">Save Your Homework Profile</h2>
+      <p class="text-slate-500 mb-8 leading-relaxed">Click the button below to complete and lock your hotel reservation homework metrics for your next live class session with your teacher.</p>
+
+      <div class="bg-white border border-slate-200 rounded-xl p-8 mb-8 shadow-sm text-center">
+        <button onclick="compileHomeworkReport()" class="w-full bg-deepBlue hover:bg-slate-800 text-white font-bold uppercase tracking-wider py-4 rounded-xl text-sm transition-colors shadow-sm font-mono">
+          Finish &amp; Lock My Homework
+        </button>
+        <div id="final-summary-box" class="hidden mt-6 p-5 rounded-xl border text-left text-sm font-medium leading-relaxed"></div>
+      </div>
+
+      <div class="flex justify-start">
+        <button class="bg-white hover:bg-slate-100 text-deepBlue font-medium px-5 py-3.5 rounded-lg border border-slate-200 flex items-center gap-2 transition-colors text-base" onclick="goTo(4)"><i class="ph ph-arrow-left"></i> Back</button>
+      </div>
+    </div>
+
+  </main>
+</div>
+
+<!-- ENGINE JAVASCRIPT COHESION SYSTEM -->
+<script>
+let currentSection = 1;
+let vocabUserSelections = {};
+let grammarUserSelections = {};
+let speechTtsInstance = null;
+
+function goTo(n) {
+  document.getElementById('sec' + currentSection).classList.remove('active');
+  currentSection = n;
+  document.getElementById('sec' + n).classList.add('active');
+  
+  // Progress Calculation
+  document.getElementById('progressFill').style.width = (n * 20) + '%';
+  document.getElementById('progressLabel').textContent = 'Step ' + n + ' / 5';
+  window.scrollTo({top: 0, behavior: 'smooth'});
+}
+
+// ── VOCABULARY SELECTION LOGIC ──
+function selectVocabMatch(qIndex, selection, btn) {
+  vocabUserSelections[qIndex] = selection;
+  const card = document.getElementById('vocab-q-' + qIndex);
+  
+  card.querySelectorAll('.vocab-btn').forEach(b => {
+    b.className = "vocab-btn bg-white border border-slate-200 p-3 rounded-lg hover:border-orangeAction transition-all";
+  });
+  
+  btn.className = "vocab-btn bg-deepBlue text-white border border-deepBlue p-3 rounded-lg transition-all";
+  
+  if (Object.keys(vocabUserSelections).length === 2) {
+    auditVocabStep();
+  }
+}
+
+function auditVocabStep() {
+  const c1 = vocabUserSelections[0] === 'bigger than';
+  const c2 = vocabUserSelections[1] === 'more expensive than';
+  const feedback = document.getElementById('vocab-feedback-msg');
+  feedback.classList.remove('hidden');
+  
+  if (c1 && c2) {
+    feedback.className = "mb-6 p-4 rounded-lg font-semibold text-center text-xs border border-emerald-200 bg-emerald-50 text-emerald-800 font-mono";
+    feedback.textContent = "✓ Good job! Your hotel room vocabulary options match correctly.";
+  } else {
+    feedback.className = "mb-6 p-4 rounded-lg font-semibold text-center text-xs border border-amber-200 bg-amber-50 text-amber-800 font-mono";
+    feedback.textContent = "⚠ Mismatch detected. Please check the room size and rate options again.";
+  }
+}
+
+// ── GRAMMAR SELECTION LOGIC ──
+function selectGrammarMatch(qIndex, selection, btn) {
+  grammarUserSelections[qIndex] = selection;
+  const card = document.getElementById('gram-q-' + qIndex);
+  
+  card.querySelectorAll('.gram-btn').forEach(b => {
+    b.className = "gram-btn bg-white border border-slate-200 px-4 py-2 rounded-lg hover:border-orangeAction transition-all text-left";
+  });
+  
+  btn.className = "gram-btn bg-deepBlue text-white border border-deepBlue px-4 py-2 rounded-lg transition-all text-left";
+  
+  if (Object.keys(grammarUserSelections).length === 2) {
+    auditGrammarStep();
+  }
+}
+
+function auditGrammarStep() {
+  const c1 = grammarUserSelections[0] === 'better';
+  const c2 = grammarUserSelections[1] === 'quieter';
+  const feedback = document.getElementById('grammar-feedback-msg');
+  feedback.classList.remove('hidden');
+  
+  if (c1 && c2) {
+    feedback.className = "mb-6 p-4 rounded-lg font-semibold text-center text-xs border border-emerald-200 bg-emerald-50 text-emerald-800 font-mono";
+    feedback.textContent = "✓ Grammar Confirmed! Adjective syntax and exception patterns are correctly mapped.";
+  } else {
+    feedback.className = "mb-6 p-4 rounded-lg font-semibold text-center text-xs border border-amber-200 bg-amber-50 text-amber-800 font-mono";
+    feedback.textContent = "⚠ Mismatch in comparative options. Check Step 2 parameters again.";
+  }
+}
+
+// ── WORKSPACE LOCK TOGGLE ──
+function toggleStep4Button() {
+  const checked = document.getElementById('essay-check').checked;
+  const btn = document.getElementById('btn-to-step4');
+  if (checked) {
+    btn.classList.remove('hidden');
+    btn.classList.add('inline-flex');
+  } else {
+    btn.classList.add('hidden');
+    btn.classList.remove('inline-flex');
+  }
+}
+
+// ── AMERICAN ACCENT PROMPT SYSTEM (TTS) ──
+function playPhonePrompt(id, btn) {
+  window.speechSynthesis.cancel();
+  const script = document.getElementById(id).textContent.trim();
+  speechTtsInstance = new SpeechSynthesisUtterance(script);
+  speechTtsInstance.lang = 'en-US'; // Sotaque Americano Seguro
+  speechTtsInstance.rate = 0.88;    // Velocidade confortável A2
+  window.speechSynthesis.speak(speechTtsInstance);
+}
+
+// ── MICROPHONE EM TEMPO REAL BLOCO A BLOCO ──
+function startMicrophoneCapture(blockNum, labelId, btn) {
+  const lbl = document.getElementById(labelId);
+  
+  btn.className = "px-4 py-2 bg-emerald-600 text-white rounded-lg font-mono text-[11px] uppercase font-bold flex items-center gap-1 shrink-0 animate-pulse";
+  lbl.textContent = "🎙️ Recording audio stream... Speak now.";
+  lbl.className = "text-red-500 font-bold";
+
+  // Simulando compressão e validação após 3 segundos de fala do aluno
+  setTimeout(() => {
+    btn.className = "px-4 py-2 bg-slate-200 text-slate-400 rounded-lg font-mono text-[11px] uppercase font-bold flex items-center gap-1 shrink-0 cursor-not-allowed";
+    btn.disabled = true;
+    lbl.textContent = "✓ Audio Captured & Verified.";
+    lbl.className = "text-emerald-600 font-bold";
+    
+    const nextBtn = document.getElementById('next-b' + blockNum);
+    if (nextBtn) {
+      nextBtn.classList.remove('hidden');
+    } else {
+      // Se for o último bloco, sela a simulação
+      document.getElementById('completion-flag').classList.remove('hidden');
+    }
+    calculateOutlineReadiness();
+  }, 3500);
+}
+
+// DESBLOQUEIO GRADUAL DOS BLOCOS DA RESERVA
+function advancePhoneBlock(targetBlockNum) {
+  const targetRow = document.getElementById('phone-block-' + targetBlockNum);
+  targetRow.classList.remove('hidden', 'opacity-40');
+  targetRow.classList.add('border-orangeAction');
+  
+  // Destrava botões internos do bloco ativado
+  document.getElementById('play-b' + targetBlockNum).disabled = false;
+  document.getElementById('play-b' + targetBlockNum).className = "w-7 h-7 bg-orange-50 text-orangeAction border border-orange-200 rounded flex items-center justify-center hover:bg-orangeAction hover:text-white transition-all text-xs";
+  
+  const micBtn = document.getElementById('mic-b' + targetBlockNum);
+  micBtn.disabled = false;
+  micBtn.className = "px-4 py-2 bg-orangeAction hover:bg-orangeHover text-white rounded-lg font-mono text-[11px] uppercase font-bold flex items-center gap-1 shrink-0";
+  
+  document.getElementById('status-b' + targetBlockNum).textContent = "Microphone: Standby";
+  
+  // Oculta o link de gatilho anterior
+  event.target.classList.add('hidden');
+  targetRow.scrollIntoView({ behavior: 'smooth', block: 'center' });
+}
+
+// BARRA DE PROGRESSO DO FLUXO DO TELEFONE
+function calculateOutlineReadiness() {
+  let score = 0;
+  
+  // Verifica blocos finalizados
+  if (document.getElementById('next-b1').classList.contains('hidden') && document.getElementById('phone-block-2').classList.contains('border-orangeAction')) score += 25;
+  if (document.getElementById('next-b2').classList.contains('hidden') && document.getElementById('phone-block-3').classList.contains('border-orangeAction')) score += 25;
+  if (!document.getElementById('completion-flag').classList.contains('hidden')) score += 25;
+  
+  // Checkboxes de QA
+  if (document.getElementById('chk-ph-1').checked) score += 12;
+  if (document.getElementById('chk-ph-2').checked) score += 13;
+
+  if (score > 100) score = 100;
+
+  document.getElementById('outline-score-lbl').textContent = score + "%";
+  document.getElementById('outline-bar-fill').style.width = score + "%";
+}
+
+// ── REPORT COMPILATION CORE ──
+function compileHomeworkReport() {
+  const summaryBox = document.getElementById('final-summary-box');
+  summaryBox.classList.remove('hidden');
+  summaryBox.className = "mt-6 p-5 rounded-xl border border-emerald-200 bg-emerald-50 text-emerald-800 font-sans shadow-inner";
+  summaryBox.innerHTML = `
+    <div class="flex items-start gap-3">
+      <span class="text-xl mt-0.5">🏆</span>
+      <div>
+        <h4 class="font-bold text-base">Hotel Reservation Homework Sealed!</h4>
+        <p class="text-xs text-slate-600 mt-1 leading-relaxed">
+          Your rate validation, adjective syntax, cloud document essay, and captured phone audio parameters are successfully saved. Bring your conversation notes ready for live interaction in our next class.
+        </p>
+      </div>
+    </div>
+  `;
+}
+
+function resetHomework() {
+  location.reload();
+}
+</script>
+</body>
+</html>

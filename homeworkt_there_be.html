@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MÉTODO FALA – Homework: Comprehensive 'There to Be' Practice</title>
+<!-- Tailwind CSS & Phosphor Icons -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://unpkg.com/@phosphor-icons/web"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          deepBlue: '#0F172A',
+          bodyLight: '#F8FAFC',
+          orangeAction: '#C2410C',
+          orangeHover: '#EA580C',
+          darkSlate: '#334155',
+          softSand: '#F1F5F9',
+        }
+      }
+    }
+  }
+</script>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;600&display=swap');
+  body { font-family: 'Inter', sans-serif; }
+  .mono { font-family: 'IBM Plex Mono', monospace; }
+</style>
+</head>
+<body class="bg-deepBlue text-darkSlate min-h-screen text-[17px] antialiased flex flex-col justify-between">
+
+<!-- HEADER FALA -->
+<header class="bg-deepBlue sticky top-0 z-50 border-b border-slate-800 shadow-md">
+  <div class="max-w-[800px] mx-auto px-6 py-4 flex items-center justify-between gap-4">
+    <div class="flex items-center gap-3">
+      <span class="text-white font-bold tracking-wider text-lg mono">MÉTODO <span class="text-orangeAction">FALA</span></span>
+      <div class="h-6 w-[1px] bg-slate-700 hidden sm:block"></div>
+      <span class="text-xs text-slate-400 font-mono hidden sm:inline">Advanced Homework · Pillar: There to Be</span>
+    </div>
+    <div class="flex items-center gap-3 font-mono text-xs">
+      <div class="bg-slate-800 px-3 py-1.5 rounded-lg border border-slate-700 text-emerald-400">
+        🏆 TOTAL SCORE: <span id="totalHwScore" class="font-bold text-white">0 / 6</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- MAIN WORKSPACE -->
+<main class="max-w-[750px] w-full mx-auto px-6 py-10 my-auto space-y-8">
+
+  <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 sm:p-8 shadow-2xl space-y-8">
+    <div class="border-b border-slate-800 pb-4">
+      <span class="text-xs font-mono font-bold text-orangeAction uppercase tracking-widest bg-orange-950/60 px-3 py-1 rounded-full border border-orange-900/50">Homework Assignment</span>
+      <h2 class="text-2xl sm:text-3xl font-bold text-white mt-2">There to Be Mastery Hub</h2>
+      <p class="text-slate-400 text-sm mt-1">
+        Complete the multi-format exercises below covering affirmative, negative, interrogative, and active writing production for <strong class="text-white">There is / There are</strong>.
+      </p>
+    </div>
+
+    <!-- SECTION 1: MULTIPLE CHOICE & FORM IDENTIFICATION -->
+    <div class="space-y-6">
+      <h3 class="text-xs font-mono font-bold text-slate-400 uppercase tracking-wider">Part 1: Structure Selection</h3>
+
+      <!-- Question 1 -->
+      <div class="bg-slate-950 p-5 rounded-xl border border-slate-800 space-y-3" id="q-block-0">
+        <span class="text-xs font-mono text-slate-500">Exercise 1 of 6</span>
+        <p class="text-slate-200 text-sm sm:text-base font-medium">
+          1. ______ a new computer on the office desk. (Singular affirmative)
+        </p>
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5">
+          <button onclick="checkHwChoice(0, 'There is', this)" class="bg-slate-900 hover:bg-slate-800 border border-slate-700 text-white font-mono text-xs py-2.5 px-3 rounded-lg transition-all cursor-pointer">There is</button>
+          <button onclick="checkHwChoice(0, 'There are', this)" class="bg-slate-900 hover:bg-slate-800 border border-slate-700 text-white font-mono text-xs py-2.5 px-3 rounded-lg transition-all cursor-pointer">There are</button>
+          <button onclick="checkHwChoice(0, 'Is there', this)" class="bg-slate-900 hover:bg-slate-800 border border-slate-700 text-white font-mono text-xs py-2.5 px-3 rounded-lg transition-all cursor-pointer">Is there</button>
+          <button onclick="checkHwChoice(0, 'Are there', this)" class="bg-slate-900 hover:bg-slate-800 border border-slate-700 text-white font-mono text-xs py-2.5 px-3 rounded-lg transition-all cursor-pointer">Are there</button>
+        </div>
+        <div class="hw-feedback hidden text-xs font-mono p-2 rounded"></div>
+      </div>
+
+      <!-- Question 2 -->
+      <div class="bg-slate-950 p-5 rounded-xl border border-slate-800 space-y-3" id="q-block-1">
+        <span class="text-xs font-mono text-slate-500">Exercise 2 of 6</span>
+        <p class="text-slate-200 text-sm sm:text-base font-medium">
+          2. ______ three modern meeting rooms in this building? (Interrogative plural)
+        </p>
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5">
+          <button onclick="checkHwChoice(1, 'There is', this)" class="bg-slate-900 hover:bg-slate-800 border border-slate-700 text-white font-mono text-xs py-2.5 px-3 rounded-lg transition-all cursor-pointer">There is</button>
+          <button onclick="checkHwChoice(1, 'There are', this)" class="bg-slate-900 hover:bg-slate-800 border border-slate-700 text-white font-mono text-xs py-2.5 px-3 rounded-lg transition-all cursor-pointer">There are</button>
+          <button onclick="checkHwChoice(1, 'Is there', this)" class="bg-slate-900 hover:bg-slate-800 border border-slate-700 text-white font-mono text-xs py-2.5 px-3 rounded-lg transition-all cursor-pointer">Is there</button>
+          <button onclick="checkHwChoice(1, 'Are there', this)" class="bg-slate-900 hover:bg-slate-800 border border-slate-700 text-white font-mono text-xs py-2.5 px-3 rounded-lg transition-all cursor-pointer">Are there</button>
+        </div>
+        <div class="hw-feedback hidden text-xs font-mono p-2 rounded"></div>
+      </div>
+
+      <!-- Question 3 -->
+      <div class="bg-slate-950 p-5 rounded-xl border border-slate-800 space-y-3" id="q-block-2">
+        <span class="text-xs font-mono text-slate-500">Exercise 3 of 6</span>
+        <p class="text-slate-200 text-sm sm:text-base font-medium">
+          3. No, ______ any printers working on the second floor. (Plural negative)
+        </p>
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5">
+          <button onclick="checkHwChoice(2, 'there is not', this)" class="bg-slate-900 hover:bg-slate-800 border border-slate-700 text-white font-mono text-xs py-2.5 px-3 rounded-lg transition-all cursor-pointer">there is not</button>
+          <button onclick="checkHwChoice(2, 'there are not', this)" class="bg-slate-900 hover:bg-slate-800 border border-slate-700 text-white font-mono text-xs py-2.5 px-3 rounded-lg transition-all cursor-pointer">there are not</button>
+          <button onclick="checkHwChoice(2, 'is there', this)" class="bg-slate-900 hover:bg-slate-800 border border-slate-700 text-white font-mono text-xs py-2.5 px-3 rounded-lg transition-all cursor-pointer">is there</button>
+          <button onclick="checkHwChoice(2, 'are there', this)" class="bg-slate-900 hover:bg-slate-800 border border-slate-700 text-white font-mono text-xs py-2.5 px-3 rounded-lg transition-all cursor-pointer">are there</button>
+        </div>
+        <div class="hw-feedback hidden text-xs font-mono p-2 rounded"></div>
+      </div>
+    </div>
+
+    <!-- SECTION 2: ACTIVE WRITING PRODUCTION (TRANSLATION) -->
+    <div class="space-y-6 pt-4 border-t border-slate-800">
+      <h3 class="text-xs font-mono font-bold text-slate-400 uppercase tracking-wider">Part 2: Active Writing &amp; Translation</h3>
+
+      <!-- Writing Exercise 1 -->
+      <div class="bg-slate-950 p-5 rounded-xl border border-slate-800 space-y-3" id="w-block-0">
+        <span class="text-xs font-mono text-slate-500">Exercise 4 of 6</span>
+        <p class="text-slate-200 text-sm sm:text-base font-medium">
+          4. Traduza para o inglês: <span class="text-orange-300 font-bold">"Há um café perto da estação?"</span> (Interrogativa singular)
+        </p>
+        <div class="flex gap-2">
+          <input type="text" id="writingInput-0" placeholder="Type your English translation here..." class="w-full p-3 bg-slate-900 text-white rounded-xl border border-slate-800 font-mono text-xs sm:text-sm focus:outline-none focus:border-orangeAction">
+          <button onclick="checkWritingAnswer(0, ['is there a cafe near the station', 'is there a coffee shop near the station'])" class="bg-orangeAction hover:bg-orangeHover text-white text-xs font-semibold px-5 py-3 rounded-xl transition-all cursor-pointer flex-shrink-0 font-mono">Check</button>
+        </div>
+        <div class="writing-feedback hidden text-xs font-mono p-2.5 rounded"></div>
+      </div>
+
+      <!-- Writing Exercise 2 -->
+      <div class="bg-slate-950 p-5 rounded-xl border border-slate-800 space-y-3" id="w-block-1">
+        <span class="text-xs font-mono text-slate-500">Exercise 5 of 6</span>
+        <p class="text-slate-200 text-sm sm:text-base font-medium">
+          5. Traduza para o inglês: <span class="text-orange-300 font-bold">"Não há cadeiras suficientes na sala de reuniões."</span> (Negativa plural com enough)
+        </p>
+        <div class="flex gap-2">
+          <input type="text" id="writingInput-1" placeholder="Type your English translation here..." class="w-full p-3 bg-slate-900 text-white rounded-xl border border-slate-800 font-mono text-xs sm:text-sm focus:outline-none focus:border-orangeAction">
+          <button onclick="checkWritingAnswer(1, ['there are not enough chairs in the meeting room', 'there arent enough chairs in the meeting room'])" class="bg-orangeAction hover:bg-orangeHover text-white text-xs font-semibold px-5 py-3 rounded-xl transition-all cursor-pointer flex-shrink-0 font-mono">Check</button>
+        </div>
+        <div class="writing-feedback hidden text-xs font-mono p-2.5 rounded"></div>
+      </div>
+
+      <!-- Writing Exercise 3 -->
+      <div class="bg-slate-950 p-5 rounded-xl border border-slate-800 space-y-3" id="w-block-2">
+        <span class="text-xs font-mono text-slate-500">Exercise 6 of 6</span>
+        <p class="text-slate-200 text-sm sm:text-base font-medium">
+          6. Traduza para o inglês: <span class="text-orange-300 font-bold">"Há muitos livros na prateleira."</span> (Afirmativa plural com too many)
+        </p>
+        <div class="flex gap-2">
+          <input type="text" id="writingInput-2" placeholder="Type your English translation here..." class="w-full p-3 bg-slate-900 text-white rounded-xl border border-slate-800 font-mono text-xs sm:text-sm focus:outline-none focus:border-orangeAction">
+          <button onclick="checkWritingAnswer(2, ['there are too many books on the shelf'])" class="bg-orangeAction hover:bg-orangeHover text-white text-xs font-semibold px-5 py-3 rounded-xl transition-all cursor-pointer flex-shrink-0 font-mono">Check</button>
+        </div>
+        <div class="writing-feedback hidden text-xs font-mono p-2.5 rounded"></div>
+      </div>
+
+    </div>
+
+    <!-- COMPLETION BANNER -->
+    <div id="hwCompletionBanner" class="hidden bg-emerald-950/80 border border-emerald-800 text-emerald-300 p-6 rounded-xl text-center space-y-3">
+      <h3 class="text-xl font-bold text-white">🎉 Homework Fully Completed!</h3>
+      <p class="text-xs font-mono">Parabéns! Você concluiu com excelência todos os exercícios de múltipla escolha e escrita ativa sobre "There to Be".</p>
+    </div>
+
+  </div>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="bg-deepBlue border-t border-slate-800 py-4 text-center text-xs text-slate-500 font-mono">
+  MÉTODO FALA · Interactive Homework Engine
+</footer>
+
+<!-- ENGINE SCRIPT -->
+<script>
+  const correctChoices = ['There is', 'Are there', 'there are not'];
+  let choiceAnswers = {};
+  let writingAnswers = {};
+  let totalScore = 0;
+
+  function updateScore() {
+    let choiceCount = Object.keys(choiceAnswers).filter(k => choiceAnswers[k]).length;
+    let writingCount = Object.keys(writingAnswers).filter(k => writingAnswers[k]).length;
+    totalScore = choiceCount + writingCount;
+    document.getElementById('totalHwScore').textContent = `${totalScore} / 6`;
+
+    if (totalScore === 6) {
+      document.getElementById('hwCompletionBanner').classList.remove('hidden');
+    }
+  }
+
+  function checkHwChoice(qIdx, selectedVal, btnElement) {
+    const block = document.getElementById('q-block-' + qIdx);
+    const buttons = block.querySelectorAll('button');
+    const feedback = block.querySelector('.hw-feedback');
+    
+    buttons.forEach(b => {
+      b.classList.remove('bg-orangeAction', 'border-orange-500');
+      b.classList.add('bg-slate-900', 'border-slate-700');
+    });
+
+    btnElement.classList.remove('bg-slate-900', 'border-slate-700');
+    btnElement.classList.add('bg-orangeAction', 'border-orange-500');
+
+    feedback.classList.remove('hidden');
+    
+    if (selectedVal === correctChoices[qIdx]) {
+      choiceAnswers[qIdx] = true;
+      feedback.className = "hw-feedback text-xs font-mono p-2.5 rounded bg-emerald-950/80 border border-emerald-800 text-emerald-300";
+      feedback.textContent = "✓ Correct! Excellent grammar application.";
+    } else {
+      choiceAnswers[qIdx] = false;
+      feedback.className = "hw-feedback text-xs font-mono p-2.5 rounded bg-rose-950/80 border border-rose-800 text-rose-300";
+      feedback.textContent = "✗ Incorrect. Review singular vs. plural rules and try another option.";
+    }
+    updateScore();
+  }
+
+  function checkWritingAnswer(wIdx, acceptedList) {
+    const block = document.getElementById('w-block-' + wIdx);
+    const inputField = document.getElementById('writingInput-' + wIdx);
+    const feedback = block.querySelector('.writing-feedback');
+    
+    const userText = inputField.value.trim().toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,"");
+    feedback.classList.remove('hidden');
+
+    const isCorrect = acceptedList.some(ans => ans.toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,"") === userText);
+
+    if (isCorrect) {
+      writingAnswers[wIdx] = true;
+      feedback.className = "writing-feedback text-xs font-mono p-2.5 rounded bg-emerald-950/80 border border-emerald-800 text-emerald-300";
+      feedback.textContent = "✓ Perfect translation! Outstanding active writing production.";
+    } else {
+      writingAnswers[wIdx] = false;
+      feedback.className = "writing-feedback text-xs font-mono p-2.5 rounded bg-rose-950/80 border border-rose-800 text-rose-300";
+      feedback.textContent = "✗ Not quite right. Check your spelling, verb form, and try again.";
+    }
+    updateScore();
+  }
+</script>
+</body>
+</html>
