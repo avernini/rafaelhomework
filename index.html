@@ -70,7 +70,7 @@
       <div class="md:col-span-2">
         <span class="text-orangeAction font-mono font-bold text-xs uppercase tracking-widest">Performance Diagnostics</span>
         <h2 class="text-3xl font-bold mt-1 mb-4">Your Independent Learning Road</h2>
-        <p class="text-slate-300 text-sm leading-relaxed mb-4">Consolidate hotel booking tasks, preposition rules (To vs. For), collocation verbs (Make vs. Do), existence structures (There to Be), and multi-skill diagnostic assessments covered in your executive English sessions.</p>
+        <p class="text-slate-300 text-sm leading-relaxed mb-4">Consolidate hotel booking tasks, preposition rules (To vs. For), collocation verbs (Make vs. Do), existence structures (There to Be), personality profiles with Verb To Be, and multi-skill diagnostic assessments covered in your sessions.</p>
         
         <!-- Linear Progress Tracker bar -->
         <div>
@@ -86,7 +86,7 @@
 
       <div class="grid grid-cols-2 gap-3 text-center">
         <div class="bg-slate-800/60 border border-slate-700/60 p-4 rounded-xl">
-          <span class="block text-2xl font-bold font-mono text-orangeAction" id="counterTotal">5</span>
+          <span class="block text-2xl font-bold font-mono text-orangeAction" id="counterTotal">6</span>
           <span class="text-[11px] font-semibold tracking-wider text-slate-400 uppercase">Assigned</span>
         </div>
         <div class="bg-slate-800/60 border border-slate-700/60 p-4 rounded-xl">
@@ -214,6 +214,33 @@
       </div>
     </div>
 
+    <!-- Task Card 6: Verb To Be Mastery (New) -->
+    <div class="bg-white border border-slate-200 rounded-xl p-6 shadow-sm hover:shadow-md hover:border-slate-300 transition-all flex flex-col sm:flex-row sm:items-center justify-between gap-6" id="taskCard-6">
+      <div class="flex items-start gap-4">
+        <div class="p-3 bg-sky-50 text-sky-700 rounded-xl border border-sky-100 flex-shrink-0 text-2xl">
+          <i class="ph ph-user-circle"></i>
+        </div>
+        <div>
+          <div class="flex items-center gap-2 flex-wrap mb-1">
+            <span class="text-xs font-mono font-bold text-sky-700 bg-sky-50 border border-sky-100 px-2 py-0.5 rounded">Task 5</span>
+            <span class="text-xs bg-slate-100 px-2 py-0.5 text-slate-600 rounded-md font-mono uppercase tracking-wider font-bold">CEFR A1-A2</span>
+          </div>
+          <h4 class="font-bold text-deepBlue text-lg">Homework: Verb To Be &amp; Personal Profile</h4>
+          <p class="text-xs text-slate-500 mt-1">Independent reinforcement exercises covering affirmative, negative, and interrogative structures of the Verb To Be applied to personality and lifestyle.</p>
+        </div>
+      </div>
+      <div class="flex sm:flex-col items-center sm:items-end justify-between sm:justify-center gap-3 border-t sm:border-t-0 pt-4 sm:pt-0 border-slate-100">
+        <!-- Status Switcher checkbox -->
+        <label class="flex items-center gap-2 cursor-pointer select-none">
+          <input type="checkbox" id="checkTask-6" onchange="toggleTaskStatus(6)" class="w-4 h-4 rounded text-orangeAction focus:ring-orangeAction border-slate-300">
+          <span class="text-xs font-mono font-bold text-slate-500 uppercase" id="statusLabel-6">Not Started</span>
+        </label>
+        <a href="homework_to_be.html" id="linkTask-6" class="bg-deepBlue hover:bg-slate-800 text-white font-semibold text-xs px-4 py-2.5 rounded-lg transition-colors flex items-center gap-1.5 focus:outline-none shadow-sm w-full sm:w-auto justify-center">
+          Execute Task <i class="ph ph-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+
     <!-- Task Card 4: Multi-Skill Proficiency Diagnostic -->
     <div class="bg-white border border-slate-200 rounded-xl p-6 shadow-sm hover:shadow-md hover:border-slate-300 transition-all flex flex-col sm:flex-row sm:items-center justify-between gap-6" id="taskCard-4">
       <div class="flex items-start gap-4">
@@ -222,7 +249,7 @@
         </div>
         <div>
           <div class="flex items-center gap-2 flex-wrap mb-1">
-            <span class="text-xs font-mono font-bold text-purple-700 bg-purple-50 border border-purple-100 px-2 py-0.5 rounded">Task 5</span>
+            <span class="text-xs font-mono font-bold text-purple-700 bg-purple-50 border border-purple-100 px-2 py-0.5 rounded">Task 6</span>
             <span class="text-xs bg-slate-100 px-2 py-0.5 text-slate-600 rounded-md font-mono uppercase tracking-wider font-bold">CEFR A2-B2 Diagnostic</span>
           </div>
           <h4 class="font-bold text-deepBlue text-lg">Multi-Skill Proficiency Diagnostic Simulator</h4>
@@ -255,7 +282,7 @@
         <label class="block text-xs font-mono font-bold uppercase text-slate-500 mb-1">Student Display Name:</label>
         <input type="text" id="inputStudentName" class="w-full p-2.5 border rounded-lg focus:outline-none focus:border-orangeAction bg-slate-50" placeholder="Type student name...">
       </div>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-3">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-3">
         <div>
           <label class="block text-xs font-mono font-bold uppercase text-slate-500 mb-1">Task 1 URL Path:</label>
           <input type="text" id="inputPath1" class="w-full p-2.5 border rounded-lg focus:outline-none focus:border-orangeAction bg-slate-50 font-mono text-xs" placeholder="order_homework.html">
@@ -274,6 +301,10 @@
         </div>
         <div>
           <label class="block text-xs font-mono font-bold uppercase text-slate-500 mb-1">Task 5 URL Path:</label>
+          <input type="text" id="inputPath6" class="w-full p-2.5 border rounded-lg focus:outline-none focus:border-orangeAction bg-slate-50 font-mono text-xs" placeholder="homework_to_be.html">
+        </div>
+        <div>
+          <label class="block text-xs font-mono font-bold uppercase text-slate-500 mb-1">Task 6 URL Path:</label>
           <input type="text" id="inputPath4" class="w-full p-2.5 border rounded-lg focus:outline-none focus:border-orangeAction bg-slate-50 font-mono text-xs" placeholder="diagnostic.html">
         </div>
       </div>
@@ -295,6 +326,7 @@ let appState = {
     2: { completed: false, path: "homework_to_for.html" },
     3: { completed: false, path: "homework_make_do.html" },
     5: { completed: false, path: "homeworkt_there_be.html" },
+    6: { completed: false, path: "homework_to_be.html" },
     4: { completed: false, path: "diagnostic.html" }
   }
 };
@@ -312,6 +344,7 @@ function saveTeacherSettings() {
   const path2 = document.getElementById('inputPath2').value.trim();
   const path3 = document.getElementById('inputPath3').value.trim();
   const path5 = document.getElementById('inputPath5').value.trim();
+  const path6 = document.getElementById('inputPath6').value.trim();
   const path4 = document.getElementById('inputPath4').value.trim();
 
   if (nameVal) appState.studentName = nameVal;
@@ -319,6 +352,7 @@ function saveTeacherSettings() {
   if (path2) appState.tasks[2].path = path2;
   if (path3) appState.tasks[3].path = path3;
   if (path5) appState.tasks[5].path = path5;
+  if (path6) appState.tasks[6].path = path6;
   if (path4) appState.tasks[4].path = path4;
 
   localStorage.setItem('metodo_fala_rafael_hub_state', JSON.stringify(appState));
@@ -337,14 +371,12 @@ function toggleTaskStatus(taskId) {
 
 // Synchronize memory and UI layers
 function syncDOM() {
-  // Sync Student Profile Name
   document.getElementById('studentNameLabel').textContent = appState.studentName;
   document.getElementById('inputStudentName').value = appState.studentName;
 
   let totalTasks = Object.keys(appState.tasks).length;
   let completedCount = 0;
 
-  // Sync Cards parameters
   for (let id in appState.tasks) {
     const task = appState.tasks[id];
     const checkbox = document.getElementById(`checkTask-${id}`);
@@ -353,13 +385,8 @@ function syncDOM() {
     const runLink = document.getElementById(`linkTask-${id}`);
     const pathInput = document.getElementById(`inputPath${id}`);
 
-    // Update Input values inside settings
     if (pathInput) pathInput.value = task.path;
-
-    // Update checkbox status
     if (checkbox) checkbox.checked = task.completed;
-
-    // Update target redirection paths
     if (runLink) runLink.setAttribute('href', task.path);
 
     if (task.completed) {
@@ -376,7 +403,6 @@ function syncDOM() {
     }
   }
 
-  // Calculate Linear metrics percentage
   let pct = Math.round((completedCount / totalTasks) * 100);
   document.getElementById('progressBarLabel').textContent = `${pct}% Complete`;
   document.getElementById('progressBarFill').style.width = `${pct}%`;
@@ -385,35 +411,18 @@ function syncDOM() {
   document.getElementById('counterDone').textContent = completedCount;
 }
 
-// Load configurations securely on window onloads
 window.onload = function() {
   const savedState = localStorage.getItem('metodo_fala_rafael_hub_state');
   if (savedState) {
     try {
       appState = JSON.parse(savedState);
-      // Fallback para garantir compatibilidade caso o estado anterior não tenha a task 5
-      if (!appState.tasks[5]) {
-        appState.tasks[5] = { completed: false, path: "homeworkt_there_be.html" };
+      if (!appState.tasks[6]) {
+        appState.tasks[6] = { completed: false, path: "homework_to_be.html" };
       }
     } catch (e) {
       console.error("Failure restoring localized states.", e);
     }
   }
-  syncDOM();
-};
-
-function resetEngine() {
-  appState = {
-    studentName: "Rafael",
-    tasks: {
-      1: { completed: false, path: "order_homework.html" },
-      2: { completed: false, path: "homework_to_for.html" },
-      3: { completed: false, path: "homework_make_do.html" },
-      5: { completed: false, path: "homeworkt_there_be.html" },
-      4: { completed: false, path: "diagnostic.html" }
-    }
-  };
-  localStorage.removeItem('metodo_fala_rafael_hub_state');
   syncDOM();
 };
 </script>

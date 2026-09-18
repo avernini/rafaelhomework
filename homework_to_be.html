@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MÉTODO FALA – Homework: Verb To Be (Personality &amp; Lifestyle)</title>
+<!-- Tailwind CSS & Phosphor Icons -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://unpkg.com/@phosphor-icons/web"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          deepBlue: '#0F172A',
+          bodyLight: '#F8FAFC',
+          orangeAction: '#C2410C',
+          orangeHover: '#EA580C',
+          darkSlate: '#334155',
+          softSand: '#F1F5F9',
+        }
+      }
+    }
+  }
+</script>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;600&display=swap');
+  body { font-family: 'Inter', sans-serif; }
+  .mono { font-family: 'IBM Plex Mono', monospace; }
+</style>
+</head>
+<body class="bg-deepBlue text-darkSlate min-h-screen text-[17px] antialiased">
+
+<!-- HEADER HOMEWORK -->
+<header class="bg-deepBlue sticky top-0 z-50 border-b border-slate-800 shadow-md">
+  <div class="max-w-[900px] mx-auto px-6 py-4 flex items-center justify-between gap-4">
+    <div class="flex items-center gap-3">
+      <div>
+        <span class="text-white font-bold tracking-wider text-lg mono">HOMEWORK · <span class="text-orangeAction">FALA</span></span>
+      </div>
+      <div class="h-6 w-[1px] bg-slate-700 hidden sm:block"></div>
+      <div class="hidden sm:block">
+        <h1 class="text-base font-bold text-white tracking-wide">Verb To Be: Personality &amp; Lifestyle</h1>
+        <p class="text-xs text-slate-400">Independent Reinforcement Exercises (Am, Is, Are)</p>
+      </div>
+    </div>
+    <div class="flex items-center gap-2">
+      <span class="text-xs font-semibold text-orangeAction bg-orange-950/60 border border-orange-800 px-3 py-1 rounded-full mono">Self-Paced Practice</span>
+    </div>
+  </div>
+</header>
+
+<!-- MAIN WORKSPACE -->
+<div class="bg-bodyLight w-full min-h-[calc(100vh-69px)] py-8 pb-24">
+  <main class="max-w-[900px] mx-auto px-6 space-y-8">
+
+    <!-- INTRO BANNER -->
+    <div class="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm">
+      <span class="inline-block text-xs font-bold tracking-widest text-orangeAction uppercase bg-orange-50 px-3 py-1 rounded-full mb-3 border border-orange-100">Review &amp; Practice</span>
+      <h2 class="text-2xl font-bold text-deepBlue mb-2">Reforço de Fixação: Verbo To Be</h2>
+      <p class="text-sm text-slate-600 leading-relaxed">
+        Complete os blocos de exercícios práticos abaixo para consolidar o uso do verbo <strong>To Be</strong> (afirmativa, negativa e interrogativa) no contexto de rotina e personalidade. Cada bloco contém 5 desafios.
+      </p>
+    </div>
+
+    <!-- EXERCISE 1: AFFIRMATIVE FORMS -->
+    <div class="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm space-y-4">
+      <div class="flex items-center justify-between border-b pb-3">
+        <h3 class="text-sm font-bold font-mono text-deepBlue uppercase tracking-wider">Exercise 1: Affirmative Sentences</h3>
+        <span class="text-xs font-mono text-slate-400">5 Questions</span>
+      </div>
+
+      <div class="space-y-4 text-xs">
+        <div class="p-3 bg-slate-50 rounded-xl border border-slate-200 space-y-2" id="ex1-q1">
+          <p class="font-semibold text-slate-800">1. I ______ very creative when I design digital interfaces.</p>
+          <div class="flex gap-2">
+            <button onclick="markEx(1, 1, 'correct', this)" class="bg-white border px-3 py-1.5 rounded-lg border-slate-200 hover:border-orangeAction transition-all font-mono cursor-pointer">am</button>
+            <button onclick="markEx(1, 1, 'wrong', this)" class="bg-white border px-3 py-1.5 rounded-lg border-slate-200 hover:border-orangeAction transition-all font-mono cursor-pointer">is</button>
+          </div>
+          <p class="feedback hidden font-bold mt-1"></p>
+        </div>
+
+        <div class="p-3 bg-slate-50 rounded-xl border border-slate-200 space-y-2" id="ex1-q2">
+          <p class="font-semibold text-slate-800">2. My colleagues ______ busy with meetings this afternoon.</p>
+          <div class="flex gap-2">
+            <button onclick="markEx(1, 2, 'wrong', this)" class="bg-white border px-3 py-1.5 rounded-lg border-slate-200 hover:border-orangeAction transition-all font-mono cursor-pointer">am</button>
+            <button onclick="markEx(1, 2, 'correct', this)" class="bg-white border px-3 py-1.5 rounded-lg border-slate-200 hover:border-orangeAction transition-all font-mono cursor-pointer">are</button>
+          </div>
+          <p class="feedback hidden font-bold mt-1"></p>
+        </div>
+
+        <div class="p-3 bg-slate-50 rounded-xl border border-slate-200 space-y-2" id="ex1-q3">
+          <p class="font-semibold text-slate-800">3. The new software ______ essential for our daily routine.</p>
+          <div class="flex gap-2">
+            <button onclick="markEx(1, 3, 'correct', this)" class="bg-white border px-3 py-1.5 rounded-lg border-slate-200 hover:border-orangeAction transition-all font-mono cursor-pointer">is</button>
+            <button onclick="markEx(1, 3, 'wrong', this)" class="bg-white border px-3 py-1.5 rounded-lg border-slate-200 hover:border-orangeAction transition-all font-mono cursor-pointer">are</button>
+          </div>
+          <p class="feedback hidden font-bold mt-1"></p>
+        </div>
+
+        <div class="p-3 bg-slate-50 rounded-xl border border-slate-200 space-y-2" id="ex1-q4">
+          <p class="font-semibold text-slate-800">4. We ______ focused on the new marketing project right now.</p>
+          <div class="flex gap-2">
+            <button onclick="markEx(1, 4, 'correct', this)" class="bg-white border px-3 py-1.5 rounded-lg border-slate-200 hover:border-orangeAction transition-all font-mono cursor-pointer">are</button>
+            <button onclick="markEx(1, 4, 'wrong', this)" class="bg-white border px-3 py-1.5 rounded-lg border-slate-200 hover:border-orangeAction transition-all font-mono cursor-pointer">is</button>
+          </div>
+          <p class="feedback hidden font-bold mt-1"></p>
+        </div>
+
+        <div class="p-3 bg-slate-50 rounded-xl border border-slate-200 space-y-2" id="ex1-q5">
+          <p class="font-semibold text-slate-800">5. He ______ an energetic person, especially in the morning.</p>
+          <div class="flex gap-2">
+            <button onclick="markEx(1, 5, 'wrong', this)" class="bg-white border px-3 py-1.5 rounded-lg border-slate-200 hover:border-orangeAction transition-all font-mono cursor-pointer">are</button>
+            <button onclick="markEx(1, 5, 'correct', this)" class="bg-white border px-3 py-1.5 rounded-lg border-slate-200 hover:border-orangeAction transition-all font-mono cursor-pointer">is</button>
+          </div>
+          <p class="feedback hidden font-bold mt-1"></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- EXERCISE 2: NEGATIVE FORMS -->
+    <div class="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm space-y-4">
+      <div class="flex items-center justify-between border-b pb-3">
+        <h3 class="text-sm font-bold font-mono text-deepBlue uppercase tracking-wider">Exercise 2: Negative Sentences</h3>
+        <span class="text-xs font-mono text-slate-400">5 Questions</span>
+      </div>
+
+      <div class="space-y-4 text-xs">
+        <div class="p-3 bg-slate-50 rounded-xl border border-slate-200 space-y-2" id="ex2-q1">
+          <p class="font-semibold text-slate-800">1. She ______ stressed because her schedule is quite flexible.</p>
+          <div class="flex gap-2">
+            <button onclick="markEx(2, 1, 'correct', this)" class="bg-white border px-3 py-1.5 rounded-lg border-slate-200 hover:border-orangeAction transition-all font-mono cursor-pointer">isn't</button>
+            <button onclick="markEx(2, 1, 'wrong', this)" class="bg-white border px-3 py-1.5 rounded-lg border-slate-200 hover:border-orangeAction transition-all font-mono cursor-pointer">aren't</button>
+          </div>
+          <p class="feedback hidden font-bold mt-1"></p>
+        </div>
+
+        <div class="p-3 bg-slate-50 rounded-xl border border-slate-200 space-y-2" id="ex2-q2">
+          <p class="font-semibold text-slate-800">2. I ______ tired today; I have plenty of energy for the gym.</p>
+          <div class="flex gap-2">
+            <button onclick="markEx(2, 2, 'wrong', this)" class="bg-white border px-3 py-1.5 rounded-lg border-slate-200 hover:border-orangeAction transition-all font-mono cursor-pointer">isn't</button>
+            <button onclick="markEx(2, 2, 'correct', this)" class="bg-white border px-3 py-1.5 rounded-lg border-slate-200 hover:border-orangeAction transition-all font-mono cursor-pointer">am not</button>
+          </div>
+          <p class="feedback hidden font-bold mt-1"></p>
+        </div>
+
+        <div class="p-3 bg-slate-50 rounded-xl border border-slate-200 space-y-2" id="ex2-q3">
+          <p class="font-semibold text-slate-800">3. They ______ happy with the new office layout.</p>
+          <div class="flex gap-2">
+            <button onclick="markEx(2, 3, 'correct', this)" class="bg-white border px-3 py-1.5 rounded-lg border-slate-200 hover:border-orangeAction transition-all font-mono cursor-pointer">aren't</button>
+            <button onclick="markEx(2, 3, 'wrong', this)" class="bg-white border px-3 py-1.5 rounded-lg border-slate-200 hover:border-orangeAction transition-all font-mono cursor-pointer">isn't</button>
+          </div>
+          <p class="feedback hidden font-bold mt-1"></p>
+        </div>
+
+        <div class="p-3 bg-slate-50 rounded-xl border border-slate-200 space-y-2" id="ex2-q4">
+          <p class="font-semibold text-slate-800">4. It ______ easy to balance work and personal life all the time.</p>
+          <div class="flex gap-2">
+            <button onclick="markEx(2, 4, 'correct', this)" class="bg-white border px-3 py-1.5 rounded-lg border-slate-200 hover:border-orangeAction transition-all font-mono cursor-pointer">isn't</button>
+            <button onclick="markEx(2, 4, 'wrong', this)" class="bg-white border px-3 py-1.5 rounded-lg border-slate-200 hover:border-orangeAction transition-all font-mono cursor-pointer">aren't</button>
+          </div>
+          <p class="feedback hidden font-bold mt-1"></p>
+        </div>
+
+        <div class="p-3 bg-slate-50 rounded-xl border border-slate-200 space-y-2" id="ex2-q5">
+          <p class="font-semibold text-slate-800">5. You ______ late for the team meeting, don't worry.</p>
+          <div class="flex gap-2">
+            <button onclick="markEx(2, 5, 'wrong', this)" class="bg-white border px-3 py-1.5 rounded-lg border-slate-200 hover:border-orangeAction transition-all font-mono cursor-pointer">am not</button>
+            <button onclick="markEx(2, 5, 'correct', this)" class="bg-white border px-3 py-1.5 rounded-lg border-slate-200 hover:border-orangeAction transition-all font-mono cursor-pointer">aren't</button>
+          </div>
+          <p class="feedback hidden font-bold mt-1"></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- EXERCISE 3: INTERROGATIVE QUESTIONS -->
+    <div class="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm space-y-4">
+      <div class="flex items-center justify-between border-b pb-3">
+        <h3 class="text-sm font-bold font-mono text-deepBlue uppercase tracking-wider">Exercise 3: Formulating Questions</h3>
+        <span class="text-xs font-mono text-slate-400">5 Questions</span>
+      </div>
+
+      <div class="space-y-4 text-xs">
+        <div class="p-3 bg-slate-50 rounded-xl border border-slate-200 space-y-2" id="ex3-q1">
+          <p class="font-semibold text-slate-800">1. "______ you relaxed on weekends, or do you still check emails?"</p>
+          <div class="flex gap-2">
+            <button onclick="markEx(3, 1, 'correct', this)" class="bg-white border px-3 py-1.5 rounded-lg border-slate-200 hover:border-orangeAction transition-all font-mono cursor-pointer">Are</button>
+            <button onclick="markEx(3, 1, 'wrong', this)" class="bg-white border px-3 py-1.5 rounded-lg border-slate-200 hover:border-orangeAction transition-all font-mono cursor-pointer">Is</button>
+          </div>
+          <p class="feedback hidden font-bold mt-1"></p>
+        </div>
+
+        <div class="p-3 bg-slate-50 rounded-xl border border-slate-200 space-y-2" id="ex3-q2">
+          <p class="font-semibold text-slate-800">2. "______ fitness important for your lifestyle?"</p>
+          <div class="flex gap-2">
+            <button onclick="markEx(3, 2, 'wrong', this)" class="bg-white border px-3 py-1.5 rounded-lg border-slate-200 hover:border-orangeAction transition-all font-mono cursor-pointer">Are</button>
+            <button onclick="markEx(3, 2, 'correct', this)" class="bg-white border px-3 py-1.5 rounded-lg border-slate-200 hover:border-orangeAction transition-all font-mono cursor-pointer">Is</button>
+          </div>
+          <p class="feedback hidden font-bold mt-1"></p>
+        </div>
+
+        <div class="p-3 bg-slate-50 rounded-xl border border-slate-200 space-y-2" id="ex3-q3">
+          <p class="font-semibold text-slate-800">3. "Where ______ your friends right now?"</p>
+          <div class="flex gap-2">
+            <button onclick="markEx(3, 3, 'correct', this)" class="bg-white border px-3 py-1.5 rounded-lg border-slate-200 hover:border-orangeAction transition-all font-mono cursor-pointer">are</button>
+            <button onclick="markEx(3, 3, 'wrong', this)" class="bg-white border px-3 py-1.5 rounded-lg border-slate-200 hover:border-orangeAction transition-all font-mono cursor-pointer">is</button>
+          </div>
+          <p class="feedback hidden font-bold mt-1"></p>
+        </div>
+
+        <div class="p-3 bg-slate-50 rounded-xl border border-slate-200 space-y-2" id="ex3-q4">
+          <p class="font-semibold text-slate-800">4. "______ I on the right track with this new assignment?"</p>
+          <div class="flex gap-2">
+            <button onclick="markEx(3, 4, 'wrong', this)" class="bg-white border px-3 py-1.5 rounded-lg border-slate-200 hover:border-orangeAction transition-all font-mono cursor-pointer">Are</button>
+            <button onclick="markEx(3, 4, 'correct', this)" class="bg-white border px-3 py-1.5 rounded-lg border-slate-200 hover:border-orangeAction transition-all font-mono cursor-pointer">Am</button>
+          </div>
+          <p class="feedback hidden font-bold mt-1"></p>
+        </div>
+
+        <div class="p-3 bg-slate-50 rounded-xl border border-slate-200 space-y-2" id="ex3-q5">
+          <p class="font-semibold text-slate-800">5. "______ he usually quiet during brainstorming sessions?"</p>
+          <div class="flex gap-2">
+            <button onclick="markEx(3, 5, 'correct', this)" class="bg-white border px-3 py-1.5 rounded-lg border-slate-200 hover:border-orangeAction transition-all font-mono cursor-pointer">Is</button>
+            <button onclick="markEx(3, 5, 'wrong', this)" class="bg-white border px-3 py-1.5 rounded-lg border-slate-200 hover:border-orangeAction transition-all font-mono cursor-pointer">Are</button>
+          </div>
+          <p class="feedback hidden font-bold mt-1"></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- SUBMISSION CARD -->
+    <div class="bg-slate-900 text-white rounded-2xl p-6 text-center shadow-md border border-slate-800 space-y-3">
+      <h3 class="text-sm font-bold font-mono uppercase tracking-wider text-orangeAction">Homework Completed?</h3>
+      <p class="text-xs text-slate-300">Great job! Return to your Hub and mark this task as complete.</p>
+      <button onclick="alert('Parabéns! Homework concluído com sucesso.')" class="inline-flex items-center gap-2 bg-white hover:bg-slate-100 text-deepBlue text-xs font-bold uppercase px-6 py-2.5 rounded-lg transition-all shadow font-mono cursor-pointer">
+        Finish &amp; Save <i class="ph ph-check"></i>
+      </button>
+    </div>
+
+  </main>
+</div>
+
+<!-- SCRIPT LOGIC -->
+<script>
+function markEx(exNum, qNum, status, btn) {
+  const row = document.getElementById(`ex${exNum}-q${qNum}`);
+  const fb = row.querySelector('.feedback');
+  fb.classList.remove('hidden');
+  
+  // Reseta as cores de todos os botões daquela questão específica
+  row.querySelectorAll('button').forEach(b => {
+    b.className = "bg-white border px-3 py-1.5 rounded-lg text-slate-700 font-medium text-xs border-slate-200 hover:bg-slate-50 transition-all cursor-pointer";
+  });
+
+  // Aplica a cor de acerto ou erro
+  if (status === 'correct') {
+    btn.className = "bg-emerald-50 border border-emerald-400 text-emerald-800 font-semibold px-3 py-1.5 rounded-lg text-xs";
+    fb.className = "feedback text-[11px] font-bold text-emerald-600 mt-1";
+    fb.textContent = "✓ Correto! Excelente escolha.";
+  } else {
+    btn.className = "bg-rose-50 border border-rose-400 text-rose-800 font-semibold px-3 py-1.5 rounded-lg text-xs";
+    fb.className = "feedback text-[11px] font-bold text-rose-600 mt-1";
+    fb.textContent = "✗ Incorreto. Tente novamente.";
+  }
+}
+</script>
+</body>
+</html>
