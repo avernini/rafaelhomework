@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MÉTODO FALA – Masterclass: Luxury Real Estate & High-End Homes</title>
+<!-- Tailwind CSS & Phosphor Icons -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://unpkg.com/@phosphor-icons/web"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          deepBlue: '#0F172A',
+          bodyLight: '#F8FAFC',
+          orangeAction: '#C2410C',
+          orangeHover: '#EA580C',
+          darkSlate: '#334155',
+          softSand: '#F1F5F9',
+        }
+      }
+    }
+  }
+</script>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;600&display=swap');
+  body { font-family: 'Inter', sans-serif; }
+  .mono { font-family: 'IBM Plex Mono', monospace; }
+  .section { display: none; animation: fadeUp .35s ease; }
+  .section.active { display: block; }
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .perspective-1000 { perspective: 1000px; }
+  .transform-style-3d { transform-style: preserve-3d; }
+  .backface-hidden { backface-visibility: hidden; }
+  .rotate-y-180 { transform: rotateY(180deg); }
+</style>
+</head>
+<body class="bg-deepBlue text-darkSlate min-h-screen text-[17px] antialiased">
+
+<!-- HEADER FALA -->
+<header class="bg-deepBlue sticky top-0 z-50 border-b border-slate-800 shadow-md">
+  <div class="max-w-[1000px] mx-auto px-6 py-4 flex items-center justify-between gap-4">
+    <div class="flex items-center gap-3">
+      <div class="flex-shrink-0">
+        <button onclick="resetSimulation()" class="cursor-pointer hover:opacity-95 text-left focus:outline-none">
+          <span class="text-white font-bold tracking-wider text-lg mono">MÉTODO <span class="text-orangeAction">FALA</span></span>
+        </button>
+      </div>
+      <div class="h-6 w-[1px] bg-slate-700 hidden sm:block"></div>
+      <div class="hidden sm:block">
+        <h1 class="text-base font-bold text-white tracking-wide">Luxury Real Estate &amp; High-End Homes</h1>
+        <p class="text-xs text-slate-400">Interactive Masterclass · Near B1 Level</p>
+      </div>
+    </div>
+    <div class="flex items-center gap-3">
+      <span class="text-xs font-semibold text-slate-400 uppercase tracking-wider mono" id="progressLabel">Step 1 / 5</span>
+      <div class="w-24 sm:w-32 h-2.5 bg-slate-800 rounded-full overflow-hidden border border-slate-700">
+        <div class="h-full bg-orangeAction rounded-full transition-all duration-300" id="progressFill" style="width:20%"></div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- MAIN WORKSPACE -->
+<div class="bg-bodyLight w-full min-h-[calc(100vh-69px)]">
+  <main class="max-w-[1000px] mx-auto px-6 py-8 pb-24">
+
+    <!-- STEP 1 – WARM-UP & SCENARIO HOOK -->
+    <div class="section active" id="sec1">
+      <span class="inline-block text-xs font-bold tracking-widest text-orangeAction uppercase bg-orange-50 px-3 py-1 rounded-full mb-3 border border-orange-100">Step 1: Scenario Hook &amp; Speaking Kickoff (5-8 min)</span>
+      <h2 class="text-3xl font-bold text-deepBlue mb-2 leading-tight">What Makes a Luxury Home Truly Special?</h2>
+      <p class="text-base text-slate-500 mb-6 leading-relaxed">Let's talk about luxury real estate, multimillion-dollar mansions, and what wealthy buyers actually look for when choosing a private sanctuary. Answer the questions below out loud to warm up:</p>
+
+      <!-- HERO IMAGE BANNER -->
+      <div class="w-full h-56 rounded-2xl overflow-hidden mb-6 shadow-sm border border-slate-200">
+        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80" alt="Luxury real estate and high-end architecture" class="w-full h-full object-cover">
+      </div>
+
+      <!-- WARM-UP DISCUSSION BOX (6 CALIBRATED PROMPTS) -->
+      <div class="bg-slate-900 text-white rounded-2xl p-6 shadow-md mb-6 border border-slate-800 space-y-4">
+        <div class="flex items-center gap-2 text-orangeAction font-bold uppercase tracking-wider text-xs font-mono">
+          <i class="ph-bold ph-chats-teardrop text-base animate-pulse"></i> Speaking Warm-up Prompts (6 Questions - Near B1)
+        </div>
+        <div class="space-y-2.5 font-mono text-xs sm:text-sm text-slate-200 leading-relaxed">
+          <p>💬 <strong>1.</strong> If you had a lot of money to buy a house, would you choose a beach house or a quiet countryside home?</p>
+          <p>💬 <strong>2.</strong> Why do many people prefer to live in secure gated communities?</p>
+          <p>💬 <strong>3.</strong> What is the most important thing for you in a house: privacy, security, or a big garden?</p>
+          <p>💬 <strong>4.</strong> Do you like watching videos about house renovations and interior design on the internet?</p>
+          <p>💬 <strong>5.</strong> Would you rather buy a new house ready to live in, or buy an old house and renovate it?</p>
+          <p>💬 <strong>6.</strong> Why do people look for homes in nature when they want to relax from a busy week?</p>
+        </div>
+      </div>
+
+      <div class="flex justify-end pt-4">
+        <button class="bg-orangeAction hover:bg-orangeHover text-white font-bold px-8 py-4 rounded-xl flex items-center gap-3 transition-all transform hover:-translate-y-0.5 shadow-md text-base cursor-pointer" onclick="goTo(2)">
+          Next: Vocabulary Lab <i class="ph-bold ph-arrow-right text-lg"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- STEP 2 – 8 FLASHCARDS VOCABULARY LAB -->
+    <div class="section" id="sec2">
+      <span class="inline-block text-xs font-bold tracking-widest text-orangeAction uppercase bg-orange-50 px-3 py-1 rounded-full mb-3 border border-orange-100">Step 2: Vocabulary Lab (8-10 min)</span>
+      <h2 class="text-2xl font-bold text-deepBlue mb-2">Essential Terms: Luxury Real Estate &amp; Lifestyle</h2>
+      <p class="text-slate-500 mb-6 text-sm leading-relaxed">Master key vocabulary terms related to high-end properties and investments. Click any card to inspect definitions and conversational examples:</p>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 mb-6" id="flashcardsGrid"></div>
+
+      <div class="flex justify-between items-center pt-4">
+        <button class="bg-white hover:bg-slate-100 text-deepBlue font-bold px-7 py-3.5 rounded-xl border border-slate-300 flex items-center gap-2.5 transition-colors shadow-sm text-sm cursor-pointer" onclick="goTo(1)">
+          <i class="ph-bold ph-arrow-left text-base"></i> Back
+        </button>
+        <button class="bg-orangeAction hover:bg-orangeHover text-white font-bold px-8 py-4 rounded-xl flex items-center gap-3 transition-all transform hover:-translate-y-0.5 shadow-md text-base cursor-pointer" onclick="goTo(3)">
+          Next: Grammar Calibration <i class="ph-bold ph-arrow-right text-lg"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- STEP 3 – GRAMMAR CALIBRATION -->
+    <div class="section" id="sec3">
+      <span class="inline-block text-xs font-bold tracking-widest text-orangeAction uppercase bg-orange-50 px-3 py-1 rounded-full mb-3 border border-orange-100">Step 3: Grammar Calibration (10-12 min)</span>
+      <h2 class="text-2xl font-bold text-deepBlue mb-2">Grammar Focus: Expressing Preferences &amp; Comparisons (Near B1)</h2>
+      <p class="text-slate-500 mb-6 text-sm">To talk about properties and lifestyle choices effectively, master comparative structures and preference verbs:</p>
+
+      <!-- GRAMMAR REFERENCE GRID -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6 text-xs">
+        <div class="bg-white border border-slate-200 rounded-xl p-4 shadow-sm space-y-2">
+          <span class="font-bold text-orangeAction block uppercase font-mono tracking-wider text-[10px]">1. Expressing Preferences (Would rather / prefer)</span>
+          <div class="p-2.5 bg-slate-50 rounded border font-mono text-[11px] text-slate-700 space-y-1">
+            <p>• I would rather live in a quiet countryside estate.</p>
+            <p>• She prefers living in a secure gated community.</p>
+          </div>
+        </div>
+        <div class="bg-white border border-slate-200 rounded-xl p-4 shadow-sm space-y-2">
+          <span class="font-bold text-emerald-700 block uppercase font-mono tracking-wider text-[10px]">2. Advanced Comparisons (As... as / Much more...)</span>
+          <div class="p-2.5 bg-slate-50 rounded border font-mono text-[11px] text-slate-700 space-y-1">
+            <p>• This mansion is <strong>much more expensive than</strong> the previous one.</p>
+            <p>• Privacy is <strong>as important as</strong> location.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- INTERACTIVE DRILLS -->
+      <div class="bg-white border border-slate-200 rounded-xl p-5 shadow-sm mb-6 space-y-4">
+        <h4 class="text-xs font-bold font-mono text-slate-400 uppercase tracking-wider">Interactive Grammar Training (4 Challenges)</h4>
+        
+        <div class="p-3 bg-slate-50 rounded-lg border border-slate-200 text-xs space-y-1.5" id="g-q-1">
+          <p class="font-semibold text-slate-800">1. "I would ______ buy a secluded house than a busy downtown apartment."</p>
+          <div class="flex gap-2">
+            <button onclick="markGrammarDrill(1, 'correct', this)" class="bg-white border border-slate-200 px-3 py-1.5 rounded-lg hover:border-orangeAction hover:bg-orange-50 font-medium font-mono text-slate-700 transition-all cursor-pointer">rather</button>
+            <button onclick="markGrammarDrill(1, 'wrong', this)" class="bg-white border border-slate-200 px-3 py-1.5 rounded-lg hover:border-orangeAction hover:bg-orange-50 font-medium font-mono text-slate-700 transition-all cursor-pointer">prefer</button>
+          </div>
+          <p class="feedback hidden text-[11px] font-bold"></p>
+        </div>
+
+        <div class="p-3 bg-slate-50 rounded-lg border border-slate-200 text-xs space-y-1.5" id="g-q-2">
+          <p class="font-semibold text-slate-800">2. "Luxury gated communities are ______ secure than normal neighborhoods."</p>
+          <div class="flex gap-2">
+            <button onclick="markGrammarDrill(2, 'correct', this)" class="bg-white border border-slate-200 px-3 py-1.5 rounded-lg hover:border-orangeAction hover:bg-orange-50 font-medium font-mono text-slate-700 transition-all cursor-pointer">much more</button>
+            <button onclick="markGrammarDrill(2, 'wrong', this)" class="bg-white border border-slate-200 px-3 py-1.5 rounded-lg hover:border-orangeAction hover:bg-orange-50 font-medium font-mono text-slate-700 transition-all cursor-pointer">more much</button>
+          </div>
+          <p class="feedback hidden text-[11px] font-bold"></p>
+        </div>
+
+        <div class="p-3 bg-slate-50 rounded-lg border border-slate-200 text-xs space-y-1.5" id="g-q-3">
+          <p class="font-semibold text-slate-800">3. "Investing in real estate is ______ profitable than keeping cash."</p>
+          <div class="flex gap-2">
+            <button onclick="markGrammarDrill(3, 'correct', this)" class="bg-white border border-slate-200 px-3 py-1.5 rounded-lg hover:border-orangeAction hover:bg-orange-50 font-medium font-mono text-slate-700 transition-all cursor-pointer">often more</button>
+            <button onclick="markGrammarDrill(3, 'wrong', this)" class="bg-white border border-slate-200 px-3 py-1.5 rounded-lg hover:border-orangeAction hover:bg-orange-50 font-medium font-mono text-slate-700 transition-all cursor-pointer">more often</button>
+          </div>
+          <p class="feedback hidden text-[11px] font-bold"></p>
+        </div>
+
+        <div class="p-3 bg-slate-50 rounded-lg border border-slate-200 text-xs space-y-1.5" id="g-q-4">
+          <p class="font-semibold text-slate-800">4. "A custom renovation is ______ costly than buying a ready-to-move house."</p>
+          <div class="flex gap-2">
+            <button onclick="markGrammarDrill(4, 'correct', this)" class="bg-white border border-slate-200 px-3 py-1.5 rounded-lg hover:border-orangeAction hover:bg-orange-50 font-medium font-mono text-slate-700 transition-all cursor-pointer">frequently more</button>
+            <button onclick="markGrammarDrill(4, 'wrong', this)" class="bg-white border border-slate-200 px-3 py-1.5 rounded-lg hover:border-orangeAction hover:bg-orange-50 font-medium font-mono text-slate-700 transition-all cursor-pointer">more frequently</button>
+          </div>
+          <p class="feedback hidden text-[11px] font-bold"></p>
+        </div>
+      </div>
+
+      <div class="flex justify-between items-center pt-4">
+        <button class="bg-white hover:bg-slate-100 text-deepBlue font-bold px-7 py-3.5 rounded-xl border border-slate-300 flex items-center gap-2.5 transition-colors shadow-sm text-sm cursor-pointer" onclick="goTo(2)">
+          <i class="ph-bold ph-arrow-left text-base"></i> Back
+        </button>
+        <button class="bg-orangeAction hover:bg-orangeHover text-white font-bold px-8 py-4 rounded-xl flex items-center gap-3 transition-all transform hover:-translate-y-0.5 shadow-md text-base cursor-pointer" onclick="goTo(4)">
+          Next: Strategic Discussion Case Files <i class="ph-bold ph-arrow-right text-lg"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- STEP 4 – STRATEGIC CASE FILES -->
+    <div class="section" id="sec4">
+      <span class="inline-block text-xs font-bold tracking-widest text-orangeAction uppercase bg-orange-50 px-3 py-1 rounded-full mb-3 border border-orange-100">Step 4: Strategic Case Files (15-18 min)</span>
+      <h2 class="text-2xl font-bold text-deepBlue mb-2">Luxury Real Estate &amp; Buyer Preferences (5 Cases)</h2>
+      <p class="text-slate-500 mb-6 text-sm">Select one of the 5 scenarios below to practice active speaking and debate buyer choices with your teacher:</p>
+
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-6 mb-6">
+        <div class="md:col-span-4 space-y-2 flex flex-col">
+          <span class="text-xs font-bold text-slate-400 uppercase font-mono block">Choose Discussion Case:</span>
+          
+          <button onclick="triggerDilemmaScenario('mansion')" id="btn-scen-mansion" class="w-full text-left bg-white border border-slate-200 hover:border-orangeAction p-2.5 rounded-xl text-xs flex items-center gap-3 transition-all cursor-pointer">
+            <span class="w-8 h-8 rounded-lg overflow-hidden flex-shrink-0 border"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=200&q=80" alt="" class="w-full h-full object-cover"></span>
+            <div><strong class="text-deepBlue block">1. Multimillion Investments</strong><span class="text-slate-400">Mansions of R$ 45 million</span></div>
+          </button>
+
+          <button onclick="triggerDilemmaScenario('privacy')" id="btn-scen-privacy" class="w-full text-left bg-white border border-slate-200 hover:border-orangeAction p-2.5 rounded-xl text-xs flex items-center gap-3 transition-all cursor-pointer">
+            <span class="w-8 h-8 rounded-lg overflow-hidden flex-shrink-0 border"><img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=200&q=80" alt="" class="w-full h-full object-cover"></span>
+            <div><strong class="text-deepBlue block">2. Privacy vs. Location</strong><span class="text-slate-400">Country vs. City center</span></div>
+          </button>
+
+          <button onclick="triggerDilemmaScenario('renovation')" id="btn-scen-renovation" class="w-full text-left bg-white border border-slate-200 hover:border-orangeAction p-2.5 rounded-xl text-xs flex items-center gap-3 transition-all cursor-pointer">
+            <span class="w-8 h-8 rounded-lg overflow-hidden flex-shrink-0 border"><img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=200&q=80" alt="" class="w-full h-full object-cover"></span>
+            <div><strong class="text-deepBlue block">3. Renovation Nightmares</strong><span class="text-slate-400">Custom projects &amp; issues</span></div>
+          </button>
+
+          <button onclick="triggerDilemmaScenario('amenities')" id="btn-scen-amenities" class="w-full text-left bg-white border border-slate-200 hover:border-orangeAction p-2.5 rounded-xl text-xs flex items-center gap-3 transition-all cursor-pointer">
+            <span class="w-8 h-8 rounded-lg overflow-hidden flex-shrink-0 border"><img src="https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&fit=crop&w=200&q=80" alt="" class="w-full h-full object-cover"></span>
+            <div><strong class="text-deepBlue block">4. High-End Amenities</strong><span class="text-slate-400">Tennis courts, pools &amp; nature</span></div>
+          </button>
+
+          <button onclick="triggerDilemmaScenario('refuge')" id="btn-scen-refuge" class="w-full text-left bg-white border border-slate-200 hover:border-orangeAction p-2.5 rounded-xl text-xs flex items-center gap-3 transition-all cursor-pointer">
+            <span class="w-8 h-8 rounded-lg overflow-hidden flex-shrink-0 border"><img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=200&q=80" alt="" class="w-full h-full object-cover"></span>
+            <div><strong class="text-deepBlue block">5. The Family Sanctuary</strong><span class="text-slate-400">Less rush, more presence</span></div>
+          </button>
+        </div>
+
+        <div class="md:col-span-8 space-y-4">
+          <div id="dilemma-data-panel" class="hidden rounded-xl bg-white border border-slate-200 text-xs leading-relaxed shadow-sm overflow-hidden">
+            <div class="w-full h-[140px] overflow-hidden"><img id="dilemma-image" src="" alt="" class="w-full h-full object-cover"></div>
+            <div class="p-4">
+              <div class="flex items-center gap-2 mb-2 border-b pb-2">
+                <span id="dilemma-icon" class="text-lg"></span>
+                <strong id="dilemma-title" class="text-deepBlue uppercase tracking-wider font-mono">Discussion Details</strong>
+              </div>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-2">
+                <div class="bg-rose-50/40 p-3 rounded-lg border border-rose-100">
+                  <span class="font-bold text-rose-700 block uppercase text-[9px] font-mono mb-1">Topic Focus</span>
+                  <p id="dilemma-pros" class="text-slate-600 font-medium"></p>
+                </div>
+                <div class="bg-emerald-50/40 p-3 rounded-lg border border-emerald-100">
+                  <span class="font-bold text-emerald-700 block uppercase text-[9px] font-mono mb-1">Target Skill</span>
+                  <p id="dilemma-cons" class="text-slate-600 font-medium"></p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="teacher-talk-panel" class="hidden p-4 rounded-xl bg-slate-900 border border-slate-800 text-slate-100 text-xs shadow-md">
+            <div class="flex items-center gap-2 text-orangeAction font-bold uppercase tracking-wider text-[10px] mb-2 font-mono">
+              <i class="ph-bold ph-chats-teardrop text-sm animate-pulse"></i> Discussion Prompts to Ask the Student
+            </div>
+            <div id="teacher-questions-box" class="space-y-2 font-mono text-white text-xs leading-relaxed bg-slate-950 p-3 rounded-lg border border-slate-800"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-white border border-slate-200 rounded-xl p-4 flex justify-between items-center shadow-sm mb-4">
+        <div class="flex gap-3 items-center">
+          <div class="p-2 bg-slate-100 rounded-lg text-base"><i class="ph ph-check-square text-orangeAction"></i></div>
+          <div>
+            <h4 class="text-xs font-bold text-deepBlue">Discussion Completed</h4>
+            <p class="text-[11px] text-slate-500">Check this box once you finish discussing this case orally.</p>
+          </div>
+        </div>
+        <label class="flex items-center gap-2 cursor-pointer select-none">
+          <input type="checkbox" id="instr-check" onchange="unlockStep5()" class="rounded border-slate-300 text-orangeAction focus:ring-orangeAction w-4 h-4 cursor-pointer">
+          <span class="text-xs font-bold text-slate-600 uppercase">Confirmed</span>
+        </label>
+      </div>
+
+      <!-- BOTÕES DE NAVEGAÇÃO OFICIAIS MÉTODO FALA -->
+      <div class="flex justify-between items-center pt-4">
+        <button class="bg-white hover:bg-slate-100 text-deepBlue font-bold px-7 py-3.5 rounded-xl border border-slate-300 flex items-center gap-2.5 transition-colors shadow-sm text-sm cursor-pointer" onclick="goTo(3)">
+          <i class="ph-bold ph-arrow-left text-base"></i> Back
+        </button>
+        <button id="btn-to-step5" class="bg-orangeAction hover:bg-orangeHover text-white font-bold px-8 py-4 rounded-xl hidden items-center gap-3 transition-all transform hover:-translate-y-0.5 shadow-md text-base cursor-pointer" onclick="goTo(5)">
+          Next: Sentence Architect <i class="ph-bold ph-arrow-right text-lg"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- STEP 5 – SENTENCE ARCHITECT (BLOCKS BUILDER) -->
+    <div class="section" id="sec5">
+      <span class="inline-block text-xs font-bold tracking-widest text-emerald-700 uppercase bg-emerald-50 px-3 py-1 rounded-full mb-3 border border-emerald-100">Step 5: Sentence Architect (10-15 min)</span>
+      <h2 class="text-2xl font-bold text-deepBlue mb-2">Syntax Builder: Assembling Real Estate Sentences</h2>
+      <p class="text-sm text-slate-500 mb-6">Click the word tiles in the correct order to build sentences about luxury homes and investments:</p>
+
+      <div class="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm mb-6 space-y-6">
+        <div class="flex items-center justify-between border-b pb-3">
+          <span class="text-xs font-mono font-bold text-orangeAction uppercase" id="builder-counter">Sentence 1 of 3</span>
+          <span class="text-xs font-mono text-slate-400">Target: Luxury Real Estate Syntax</span>
+        </div>
+
+        <div>
+          <span class="text-xs font-mono text-slate-400 block mb-1">Portuguese Reference:</span>
+          <p id="builder-target-ref" class="text-sm sm:text-base font-semibold text-deepBlue bg-slate-50 p-3 rounded-xl border border-slate-200">
+            Carregando referência...
+          </p>
+        </div>
+
+        <!-- SLOT DROP ZONE -->
+        <div>
+          <span class="text-xs font-mono text-slate-400 block mb-1">Your Built Sentence (Click tiles to assemble):</span>
+          <div id="builder-slot-zone" class="min-h-[60px] p-3 bg-slate-900 rounded-xl border border-slate-800 flex flex-wrap gap-2 items-center"></div>
+        </div>
+
+        <!-- AVAILABLE TILES -->
+        <div>
+          <span class="text-xs font-mono text-slate-400 block mb-1">Available Tiles:</span>
+          <div id="builder-tiles-zone" class="min-h-[60px] p-3 bg-slate-100 rounded-xl border border-slate-200 flex flex-wrap gap-2 items-center"></div>
+        </div>
+
+        <div class="flex justify-between items-center pt-2">
+          <button onclick="resetCurrentSentence()" class="bg-white hover:bg-slate-100 text-deepBlue border border-slate-200 text-xs font-semibold px-4 py-2 rounded-lg transition-all cursor-pointer">
+            Reset Tiles
+          </button>
+          <button onclick="checkBuiltSentence()" class="bg-orangeAction hover:bg-orangeHover text-white text-xs font-semibold px-6 py.5 rounded-lg transition-all shadow cursor-pointer">
+            Check Sentence
+          </button>
+        </div>
+
+        <div id="builder-feedback" class="hidden p-3 rounded-xl text-xs font-mono"></div>
+      </div>
+
+      <div class="bg-slate-900 text-white rounded-xl p-5 text-center shadow-md border border-slate-800">
+        <h4 class="text-sm font-bold mb-1 font-mono uppercase tracking-wider text-orangeAction">Save Learning Progress</h4>
+        <p class="text-xs text-slate-400 mb-4 leading-relaxed">Ready to complete today's session?</p>
+        <button onclick="alert('Session completed successfully! Great mastery of luxury real estate vocabulary!')" class="inline-flex items-center gap-2 bg-white hover:bg-slate-100 text-deepBlue font-bold uppercase px-5.5 py-3.5 rounded-xl transition-all shadow font-mono cursor-pointer">
+          Finish Masterclass <i class="ph-bold ph-check text-base"></i>
+        </button>
+      </div>
+
+      <!-- BOTÃO DE NAVEGAÇÃO OFICIAL MÉTODO FALA -->
+      <div class="flex justify-start pt-4">
+        <button class="bg-white hover:bg-slate-100 text-deepBlue font-bold px-7 py-3.5 rounded-xl border border-slate-300 flex items-center gap-2.5 transition-colors shadow-sm text-sm cursor-pointer" onclick="goTo(4)">
+          <i class="ph-bold ph-arrow-left text-base"></i> Back
+        </button>
+      </div>
+    </div>
+
+  </main>
+</div>
+
+<!-- SCRIPT LOGIC -->
+<script>
+let currentSection = 1;
+
+const flashcardsData = [
+  { en: "Mansion", def: "A very large, impressive, and expensive house.", ex: "They invested millions in a luxury mansion.", img: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=400&q=80" },
+  { en: "Sanctuary", def: "A place of safety, refuge, or quiet comfort.", ex: "The countryside home serves as a family sanctuary.", img: "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=400&q=80" },
+  { en: "Renovation", def: "The act of improving or restoring an old structure.", ex: "The property required a massive and costly renovation.", img: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=400&q=80" },
+  { en: "Gated community", def: "A residential community with controlled entrances and security.", ex: "Many celebrities prefer living in exclusive gated communities.", img: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=400&q=80" },
+  { en: "Privacy", def: "The state of being free from public attention or disturbance.", ex: "High-end buyers value privacy above everything else.", img: "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=400&q=80" },
+  { en: "Amenity", def: "A desirable or useful feature or facility of a building or place.", ex: "The estate includes luxury amenities like a tennis court and pool.", img: "https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&fit=crop&w=400&q=80" },
+  { en: "Investment", def: "The action or process of investing money for profit or material result.", ex: "Real estate is considered a solid long-term investment.", img: "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=400&q=80" },
+  { en: "Refuge", def: "A condition of being safe or sheltered from pursuit, danger, or trouble.", ex: "They turned the country house into a peaceful refuge.", img: "https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=400&q=80" }
+];
+
+function renderFlashcards() {
+  const grid = document.getElementById('flashcardsGrid');
+  grid.innerHTML = '';
+  flashcardsData.forEach((card, idx) => {
+    let wrapper = document.createElement('div');
+    wrapper.className = "perspective-1000 w-full h-64 cursor-pointer";
+    wrapper.onclick = function() {
+      this.querySelector('.card-inner').classList.toggle('rotate-y-180');
+    };
+    wrapper.innerHTML = `
+      <div class="card-inner relative w-full h-full duration-500 transform-style-3d shadow-sm rounded-xl">
+        <div class="absolute inset-0 w-full h-full bg-white border border-slate-200 rounded-xl overflow-hidden flex flex-col justify-between backface-hidden">
+          <div class="h-28 w-full overflow-hidden"><img src="${card.img}" alt="${card.en}" class="w-full h-full object-cover"></div>
+          <div class="p-3 flex flex-col justify-between flex-1">
+            <div class="flex items-center justify-between">
+              <span class="text-[9px] font-mono text-slate-400 uppercase">#${idx+1} · Click</span>
+              <button onclick="event.stopPropagation(); audioSpeak('${card.en}')" class="w-6 h-6 rounded-full bg-orange-50 text-orangeAction flex items-center justify-center hover:bg-orangeAction hover:text-white transition-colors cursor-pointer">
+                <i class="ph-bold ph-speaker-high text-xs"></i>
+              </button>
+            </div>
+            <div class="text-center"><h4 class="text-deepBlue font-mono font-bold text-xs">${card.en}</h4></div>
+          </div>
+        </div>
+        <div class="absolute inset-0 w-full h-full bg-deepBlue text-white rounded-xl p-4 flex flex-col justify-between backface-hidden rotate-y-180">
+          <div class="flex items-center justify-between">
+            <span class="text-[9px] font-mono text-orangeAction uppercase">Vocabulary Lab</span>
+            <span class="text-[9px] font-mono text-slate-400">Luxury Real Estate</span>
+          </div>
+          <div class="space-y-1.5 text-left">
+            <p class="text-[11px] text-slate-200 leading-snug"><strong>Meaning:</strong> ${card.def}</p>
+            <p class="text-[11px] text-orange-300 italic leading-snug"><strong>Ex:</strong> "${card.ex}"</p>
+          </div>
+          <div class="text-center"><span class="text-[9px] text-slate-400 italic">Back Side</span></div>
+        </div>
+      </div>
+    `;
+    grid.appendChild(wrapper);
+  });
+}
+document.addEventListener('DOMContentLoaded', renderFlashcards);
+
+function audioSpeak(word) {
+  window.speechSynthesis.cancel();
+  const tts = new SpeechSynthesisUtterance(word);
+  tts.lang = 'en-US';
+  tts.rate = 0.85;
+  window.speechSynthesis.speak(tts);
+}
+
+function markGrammarDrill(qNum, status, btn) {
+  const row = document.getElementById('g-q-' + qNum);
+  const fb = row.querySelector('.feedback');
+  fb.classList.remove('hidden');
+  row.querySelectorAll('button').forEach(b => b.className = "bg-white border px-3 py-1.5 rounded-lg text-slate-700 font-medium text-xs border-slate-200 hover:bg-slate-50 transition-all cursor-pointer");
+
+  if (status === 'correct') {
+    btn.className = "bg-emerald-50 border border-emerald-400 text-emerald-800 font-semibold px-3 py-1.5 rounded-lg text-xs";
+    fb.className = "feedback text-[11px] font-bold text-emerald-600 mt-1";
+    fb.textContent = "✓ Correct! Great job!";
+  } else {
+    btn.className = "bg-rose-50 border border-rose-400 text-rose-800 font-semibold px-3 py-1.5 rounded-lg text-xs";
+    fb.className = "feedback text-[11px] font-bold text-rose-600 mt-1";
+    fb.textContent = "✗ Incorrect. Try again.";
+  }
+}
+
+const dilemmaScenariosData = {
+  mansion: {
+    icon: "🏡",
+    title: "1. Multimillion Investments",
+    image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1000&q=80",
+    pros: "Discussing luxury purchases and market impact.",
+    cons: "Target Expression: 'Investing R$ 45 million in a gated community'.",
+    questions: [
+      "1. Why do high-end properties reach values like 45 million reais?",
+      "2. Do you think celebrity purchases influence the luxury real estate market?",
+      "3. What makes a property worth such a huge investment?"
+    ],
+    btnId: "btn-scen-mansion"
+  },
+  privacy: {
+    icon: "🌳",
+    title: "2. Privacy vs. Location",
+    image: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1000&q=80",
+    pros: "Comparing countryside seclusion with city convenience.",
+    cons: "Target Structure: 'I would rather live in a secluded area than downtown.'",
+    questions: [
+      "1. Would you prefer a remote countryside mansion or a penthouse in the city center?",
+      "2. Why is privacy becoming the ultimate luxury for wealthy buyers?",
+      "3. What are the downsides of living far from urban centers?"
+    ],
+    btnId: "btn-scen-privacy"
+  },
+  renovation: {
+    icon: "🏗️",
+    title: "3. Renovation Nightmares",
+    image: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1000&q=80",
+    pros: "Discussing custom remodeling issues and unexpected costs.",
+    cons: "Target Structure: 'Renovating an old property can cause unexpected headaches.'",
+    questions: [
+      "1. Have you ever faced unexpected problems during a home renovation?",
+      "2. Is it better to buy a ready-to-move house or renovate an existing one?",
+      "3. How do luxury renovations impact property value?"
+    ],
+    btnId: "btn-scen-renovation"
+  },
+  amenities: {
+    icon: "🏊‍♂️",
+    title: "4. High-End Amenities",
+    image: "https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&fit=crop&w=1000&q=80",
+    pros: "Evaluating leisure structures like tennis courts, pools, and green areas.",
+    cons: "Target Structure: 'Luxury homes must feature top-tier leisure facilities.'",
+    questions: [
+      "1. Which amenity is most important to you: a private pool, a tennis court, or a huge garden?",
+      "2. Do people actually use all amenities in a huge mansion?",
+      "3. How do green areas improve our daily mood?"
+    ],
+    btnId: "btn-scen-amenities"
+  },
+  refuge: {
+    icon: "👨‍👩‍👧‍👦",
+    title: "5. The Family Sanctuary",
+    image: "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1000&q=80",
+    pros: "Discussing lifestyle changes: less rush, more presence.",
+    cons: "Target Structure: 'This home is about less rush and more family presence.'",
+    questions: [
+      "1. How do you understand the phrase 'less rush, more presence'?",
+      "2. Can a house change your family dynamics?",
+      "3. What does 'slow living' mean in a fast-paced world?"
+    ],
+    btnId: "btn-scen-refuge"
+  }
+};
+
+function triggerDilemmaScenario(key) {
+  const data = dilemmaScenariosData[key];
+  document.querySelectorAll('[id^="btn-scen-"]').forEach(b => {
+    b.className = "w-full text-left bg-white border border-slate-200 hover:border-orangeAction p-2.5 rounded-xl text-xs flex items-center gap-3 transition-all cursor-pointer";
+  });
+  document.getElementById(data.btnId).className = "w-full text-left bg-orangeAction border border-orangeAction text-white p-2.5 rounded-xl text-xs flex items-center gap-3 transition-all font-semibold shadow-sm cursor-pointer";
+
+  document.getElementById('dilemma-data-panel').classList.remove('hidden');
+  document.getElementById('teacher-talk-panel').classList.remove('hidden');
+
+  document.getElementById('dilemma-image').src = data.image;
+  document.getElementById('dilemma-icon').textContent = data.icon;
+  document.getElementById('dilemma-title').textContent = data.title;
+  document.getElementById('dilemma-pros').textContent = data.pros;
+  document.getElementById('dilemma-cons').textContent = data.cons;
+
+  const qBox = document.getElementById('teacher-questions-box');
+  qBox.innerHTML = data.questions.map(q => `<p class="font-medium p-1">• ${q}</p>`).join('');
+  document.getElementById('dilemma-data-panel').scrollIntoView({ behavior: 'smooth', block: 'center' });
+}
+
+function unlockStep5() {
+  const checked = document.getElementById('instr-check').checked;
+  const btn = document.getElementById('btn-to-step5');
+  if (checked) {
+    btn.classList.remove('hidden');
+    btn.classList.add('inline-flex');
+  } else {
+    btn.classList.add('hidden');
+    btn.classList.remove('inline-flex');
+  }
+}
+
+// STEP 5: BLOCKS BUILDER SENTENCES
+const builderSentences = [
+  {
+    ref: "Comprar uma mansão de luxo no interior oferece mais privacidade e espaço.",
+    correct: ["Buying", "a", "luxury", "mansion", "in", "the", "countryside", "offers", "more", "privacy."],
+    shuffled: ["mansion", "Buying", "luxury", "in", "a", "countryside", "the", "offers", "privacy.", "more"]
+  },
+  {
+    ref: "Muitos compradores de alto padrão preferem áreas verdes e segurança exclusiva.",
+    correct: ["Many", "high-end", "buyers", "prefer", "green", "areas", "and", "exclusive", "security."],
+    shuffled: ["prefer", "Many", "buyers", "high-end", "areas", "green", "security.", "exclusive", "and"]
+  },
+  {
+    ref: "O objetivo principal desta casa de campo é ter menos pressa e mais presença.",
+    correct: ["The", "main", "goal", "of", "this", "country", "house", "is", "less", "rush", "and", "more", "presence."],
+    shuffled: ["house", "The", "main", "of", "goal", "this", "country", "less", "is", "and", "rush", "presence.", "more"]
+  }
+];
+
+let currentBuilderIdx = 0;
+
+function loadBuilderSentence() {
+  const item = builderSentences[currentBuilderIdx];
+  document.getElementById('builder-counter').textContent = `Sentence ${currentBuilderIdx + 1} of ${builderSentences.length}`;
+  document.getElementById('builder-target-ref').textContent = item.ref;
+  
+  const slotZone = document.getElementById('builder-slot-zone');
+  const tilesZone = document.getElementById('builder-tiles-zone');
+  slotZone.innerHTML = '';
+  tilesZone.innerHTML = '';
+  
+  document.getElementById('builder-feedback').classList.add('hidden');
+
+  item.shuffled.forEach((word) => {
+    let tile = document.createElement('button');
+    tile.className = "bg-white hover:bg-orange-50 border border-slate-300 text-deepBlue font-mono text-xs px-3 py-2 rounded-lg shadow-sm transition-all cursor-pointer";
+    tile.textContent = word;
+    tile.onclick = function() {
+      if (tile.parentElement === tilesZone) {
+        slotZone.appendChild(tile);
+      } else {
+        tilesZone.appendChild(tile);
+      }
+    };
+    tilesZone.appendChild(tile);
+  });
+}
+
+function resetCurrentSentence() {
+  loadBuilderSentence();
+}
+
+function checkBuiltSentence() {
+  const slotZone = document.getElementById('builder-slot-zone');
+  const userWords = Array.from(slotZone.children).map(t => t.textContent);
+  const correctWords = builderSentences[currentBuilderIdx].correct;
+  
+  const fb = document.getElementById('builder-feedback');
+  fb.classList.remove('hidden');
+
+  const isMatch = userWords.length === correctWords.length && userWords.every((w, i) => w === correctWords[i]);
+
+  if (isMatch) {
+    fb.className = "p-3 rounded-xl text-xs font-mono bg-emerald-50 border border-emerald-300 text-emerald-900";
+    fb.textContent = "✓ Correct syntax! Perfect sentence assembly.";
+    setTimeout(() => {
+      currentBuilderIdx++;
+      if (currentBuilderIdx < builderSentences.length) {
+        loadBuilderSentence();
+      } else {
+        document.getElementById('builder-counter').textContent = "All Sentences Completed! 🎉";
+        document.getElementById('builder-target-ref').textContent = "Parabéns! Você concluiu com excelência todos os blocos de sintaxe sobre imóveis de luxo.";
+      }
+    }, 1800);
+  } else {
+    fb.className = "p-3 rounded-xl text-xs font-mono bg-rose-50 border border-rose-300 text-rose-900";
+    fb.textContent = "✗ Not quite right. Check word order and try again.";
+  }
+}
+
+document.addEventListener('DOMContentLoaded', loadBuilderSentence);
+
+function goTo(n) {
+  document.getElementById('sec' + currentSection).classList.remove('active');
+  currentSection = n;
+  document.getElementById('sec' + n).classList.add('active');
+  document.getElementById('progressFill').style.width = (n * 20) + '%';
+  document.getElementById('progressLabel').textContent = 'Step ' + n + ' / 5';
+  window.scrollTo({top: 0, behavior: 'smooth'});
+}
+
+function resetSimulation() {
+  location.reload();
+}
+</script>
+</body>
+</html>
