@@ -50,10 +50,15 @@
       </div>
     </div>
 
-    <!-- Active Student Profile Tag -->
-    <div class="flex items-center gap-2.5 bg-slate-800/80 px-4 py-1.5 rounded-lg border border-slate-700">
-      <div class="w-2.5 h-2.5 bg-emerald-500 rounded-full animate-pulse"></div>
-      <span class="text-xs font-semibold text-white tracking-wide uppercase font-mono" id="studentNameLabel">Rafael</span>
+    <!-- Active Student Profile Tag & Botão Global de PDF -->
+    <div class="flex items-center gap-3">
+      <a href="https://drive.google.com/file/d/1fCxwdTIr_Dn2YizQybsxTGMIZRZYjGI7/view?usp=sharing" id="globalPdfButton" target="_blank" class="bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 px-3 py-1.5 rounded-lg text-xs font-semibold flex items-center gap-1.5 transition-colors" title="Visualizar Plano de 7 Dias em PDF">
+        <i class="ph ph-file-pdf text-rose-500 text-base"></i> <span class="hidden sm:inline">7-Day Challenge PDF</span>
+      </a>
+      <div class="flex items-center gap-2.5 bg-slate-800/80 px-4 py-1.5 rounded-lg border border-slate-700">
+        <div class="w-2.5 h-2.5 bg-emerald-500 rounded-full animate-pulse"></div>
+        <span class="text-xs font-semibold text-white tracking-wide uppercase font-mono" id="studentNameLabel">Rafael</span>
+      </div>
     </div>
 
   </div>
@@ -70,7 +75,7 @@
       <div class="md:col-span-2">
         <span class="text-orangeAction font-mono font-bold text-xs uppercase tracking-widest">Performance Diagnostics</span>
         <h2 class="text-3xl font-bold mt-1 mb-4">Your Independent Learning Road</h2>
-        <p class="text-slate-300 text-sm leading-relaxed mb-4">Consolidate hotel booking tasks, preposition rules (To vs. For), collocation verbs (Make vs. Do), existence structures (There to Be), personality profiles with Verb To Be, and multi-skill diagnostic assessments covered in your sessions.</p>
+        <p class="text-slate-300 text-sm leading-relaxed mb-4">Consolidate hotel booking tasks, preposition rules, collocations, financial freedom values, personal profiles, and multi-skill diagnostic assessments covered in your sessions.</p>
         
         <!-- Linear Progress Tracker bar -->
         <div>
@@ -86,7 +91,7 @@
 
       <div class="grid grid-cols-2 gap-3 text-center">
         <div class="bg-slate-800/60 border border-slate-700/60 p-4 rounded-xl">
-          <span class="block text-2xl font-bold font-mono text-orangeAction" id="counterTotal">6</span>
+          <span class="block text-2xl font-bold font-mono text-orangeAction" id="counterTotal">7</span>
           <span class="text-[11px] font-semibold tracking-wider text-slate-400 uppercase">Assigned</span>
         </div>
         <div class="bg-slate-800/60 border border-slate-700/60 p-4 rounded-xl">
@@ -122,7 +127,6 @@
         </div>
       </div>
       <div class="flex sm:flex-col items-center sm:items-end justify-between sm:justify-center gap-3 border-t sm:border-t-0 pt-4 sm:pt-0 border-slate-100">
-        <!-- Status Switcher checkbox -->
         <label class="flex items-center gap-2 cursor-pointer select-none">
           <input type="checkbox" id="checkTask-1" onchange="toggleTaskStatus(1)" class="w-4 h-4 rounded text-orangeAction focus:ring-orangeAction border-slate-300">
           <span class="text-xs font-mono font-bold text-slate-500 uppercase" id="statusLabel-1">Not Started</span>
@@ -149,7 +153,6 @@
         </div>
       </div>
       <div class="flex sm:flex-col items-center sm:items-end justify-between sm:justify-center gap-3 border-t sm:border-t-0 pt-4 sm:pt-0 border-slate-100">
-        <!-- Status Switcher checkbox -->
         <label class="flex items-center gap-2 cursor-pointer select-none">
           <input type="checkbox" id="checkTask-2" onchange="toggleTaskStatus(2)" class="w-4 h-4 rounded text-orangeAction focus:ring-orangeAction border-slate-300">
           <span class="text-xs font-mono font-bold text-slate-500 uppercase" id="statusLabel-2">Not Started</span>
@@ -176,7 +179,6 @@
         </div>
       </div>
       <div class="flex sm:flex-col items-center sm:items-end justify-between sm:justify-center gap-3 border-t sm:border-t-0 pt-4 sm:pt-0 border-slate-100">
-        <!-- Status Switcher checkbox -->
         <label class="flex items-center gap-2 cursor-pointer select-none">
           <input type="checkbox" id="checkTask-3" onchange="toggleTaskStatus(3)" class="w-4 h-4 rounded text-orangeAction focus:ring-orangeAction border-slate-300">
           <span class="text-xs font-mono font-bold text-slate-500 uppercase" id="statusLabel-3">Not Started</span>
@@ -203,7 +205,6 @@
         </div>
       </div>
       <div class="flex sm:flex-col items-center sm:items-end justify-between sm:justify-center gap-3 border-t sm:border-t-0 pt-4 sm:pt-0 border-slate-100">
-        <!-- Status Switcher checkbox -->
         <label class="flex items-center gap-2 cursor-pointer select-none">
           <input type="checkbox" id="checkTask-5" onchange="toggleTaskStatus(5)" class="w-4 h-4 rounded text-orangeAction focus:ring-orangeAction border-slate-300">
           <span class="text-xs font-mono font-bold text-slate-500 uppercase" id="statusLabel-5">Not Started</span>
@@ -214,7 +215,7 @@
       </div>
     </div>
 
-    <!-- Task Card 6: Verb To Be Mastery (New) -->
+    <!-- Task Card 6: Verb To Be Mastery -->
     <div class="bg-white border border-slate-200 rounded-xl p-6 shadow-sm hover:shadow-md hover:border-slate-300 transition-all flex flex-col sm:flex-row sm:items-center justify-between gap-6" id="taskCard-6">
       <div class="flex items-start gap-4">
         <div class="p-3 bg-sky-50 text-sky-700 rounded-xl border border-sky-100 flex-shrink-0 text-2xl">
@@ -230,12 +231,37 @@
         </div>
       </div>
       <div class="flex sm:flex-col items-center sm:items-end justify-between sm:justify-center gap-3 border-t sm:border-t-0 pt-4 sm:pt-0 border-slate-100">
-        <!-- Status Switcher checkbox -->
         <label class="flex items-center gap-2 cursor-pointer select-none">
           <input type="checkbox" id="checkTask-6" onchange="toggleTaskStatus(6)" class="w-4 h-4 rounded text-orangeAction focus:ring-orangeAction border-slate-300">
           <span class="text-xs font-mono font-bold text-slate-500 uppercase" id="statusLabel-6">Not Started</span>
         </label>
         <a href="homework_to_be.html" id="linkTask-6" class="bg-deepBlue hover:bg-slate-800 text-white font-semibold text-xs px-4 py-2.5 rounded-lg transition-colors flex items-center gap-1.5 focus:outline-none shadow-sm w-full sm:w-auto justify-center">
+          Execute Task <i class="ph ph-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+
+    <!-- Task Card 7: Homework Buying & Financial Freedom (NEW) -->
+    <div class="bg-white border border-slate-200 rounded-xl p-6 shadow-sm hover:shadow-md hover:border-slate-300 transition-all flex flex-col sm:flex-row sm:items-center justify-between gap-6" id="taskCard-7">
+      <div class="flex items-start gap-4">
+        <div class="p-3 bg-amber-50 text-amber-700 rounded-xl border border-amber-100 flex-shrink-0 text-2xl">
+          <i class="ph ph-currency-dollar"></i>
+        </div>
+        <div>
+          <div class="flex items-center gap-2 flex-wrap mb-1">
+            <span class="text-xs font-mono font-bold text-amber-700 bg-amber-50 border border-amber-100 px-2 py-0.5 rounded">Task 6</span>
+            <span class="text-xs bg-slate-100 px-2 py-0.5 text-slate-600 rounded-md font-mono uppercase tracking-wider font-bold">CEFR B1 Interactive</span>
+          </div>
+          <h4 class="font-bold text-deepBlue text-lg">Homework: Financial Freedom &amp; Personal Values</h4>
+          <p class="text-xs text-slate-500 mt-1">Interactive studio featuring fill-in-the-blanks, tile syntax assembly, multiple choice drills, and live Google Docs writing assignment.</p>
+        </div>
+      </div>
+      <div class="flex sm:flex-col items-center sm:items-end justify-between sm:justify-center gap-3 border-t sm:border-t-0 pt-4 sm:pt-0 border-slate-100">
+        <label class="flex items-center gap-2 cursor-pointer select-none">
+          <input type="checkbox" id="checkTask-7" onchange="toggleTaskStatus(7)" class="w-4 h-4 rounded text-orangeAction focus:ring-orangeAction border-slate-300">
+          <span class="text-xs font-mono font-bold text-slate-500 uppercase" id="statusLabel-7">Not Started</span>
+        </label>
+        <a href="homework_buying.html" id="linkTask-7" class="bg-deepBlue hover:bg-slate-800 text-white font-semibold text-xs px-4 py-2.5 rounded-lg transition-colors flex items-center gap-1.5 focus:outline-none shadow-sm w-full sm:w-auto justify-center">
           Execute Task <i class="ph ph-arrow-right"></i>
         </a>
       </div>
@@ -249,7 +275,7 @@
         </div>
         <div>
           <div class="flex items-center gap-2 flex-wrap mb-1">
-            <span class="text-xs font-mono font-bold text-purple-700 bg-purple-50 border border-purple-100 px-2 py-0.5 rounded">Task 6</span>
+            <span class="text-xs font-mono font-bold text-purple-700 bg-purple-50 border border-purple-100 px-2 py-0.5 rounded">Task 7</span>
             <span class="text-xs bg-slate-100 px-2 py-0.5 text-slate-600 rounded-md font-mono uppercase tracking-wider font-bold">CEFR A2-B2 Diagnostic</span>
           </div>
           <h4 class="font-bold text-deepBlue text-lg">Multi-Skill Proficiency Diagnostic Simulator</h4>
@@ -257,7 +283,6 @@
         </div>
       </div>
       <div class="flex sm:flex-col items-center sm:items-end justify-between sm:justify-center gap-3 border-t sm:border-t-0 pt-4 sm:pt-0 border-slate-100">
-        <!-- Status Switcher checkbox -->
         <label class="flex items-center gap-2 cursor-pointer select-none">
           <input type="checkbox" id="checkTask-4" onchange="toggleTaskStatus(4)" class="w-4 h-4 rounded text-orangeAction focus:ring-orangeAction border-slate-300">
           <span class="text-xs font-mono font-bold text-slate-500 uppercase" id="statusLabel-4">Not Started</span>
@@ -273,7 +298,7 @@
   <!-- ── TEACHER CONFIGURATION DASHBOARD (HIDDEN BY DEFAULT) ── -->
   <div id="teacherSettings" class="bg-white border border-slate-200 rounded-xl p-6 hidden transition-all animate-fadeUp">
     <div class="flex items-center justify-between border-b pb-3 mb-4">
-      <span class="text-xs font-mono font-bold text-orangeAction uppercase">Hub Customization panel</span>
+      <span class="text-xs font-mono font-bold text-orangeAction uppercase">Hub Customization Panel</span>
       <button onclick="toggleTeacherSettings()" class="text-slate-400 hover:text-slate-600 text-sm font-bold">Close <i class="ph ph-x"></i></button>
     </div>
     
@@ -282,30 +307,41 @@
         <label class="block text-xs font-mono font-bold uppercase text-slate-500 mb-1">Student Display Name:</label>
         <input type="text" id="inputStudentName" class="w-full p-2.5 border rounded-lg focus:outline-none focus:border-orangeAction bg-slate-50" placeholder="Type student name...">
       </div>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-3">
-        <div>
-          <label class="block text-xs font-mono font-bold uppercase text-slate-500 mb-1">Task 1 URL Path:</label>
-          <input type="text" id="inputPath1" class="w-full p-2.5 border rounded-lg focus:outline-none focus:border-orangeAction bg-slate-50 font-mono text-xs" placeholder="order_homework.html">
-        </div>
-        <div>
-          <label class="block text-xs font-mono font-bold uppercase text-slate-500 mb-1">Task 2 URL Path:</label>
-          <input type="text" id="inputPath2" class="w-full p-2.5 border rounded-lg focus:outline-none focus:border-orangeAction bg-slate-50 font-mono text-xs" placeholder="homework_to_for.html">
-        </div>
-        <div>
-          <label class="block text-xs font-mono font-bold uppercase text-slate-500 mb-1">Task 3 URL Path:</label>
-          <input type="text" id="inputPath3" class="w-full p-2.5 border rounded-lg focus:outline-none focus:border-orangeAction bg-slate-50 font-mono text-xs" placeholder="homework_make_do.html">
-        </div>
-        <div>
-          <label class="block text-xs font-mono font-bold uppercase text-slate-500 mb-1">Task 4 URL Path:</label>
-          <input type="text" id="inputPath5" class="w-full p-2.5 border rounded-lg focus:outline-none focus:border-orangeAction bg-slate-50 font-mono text-xs" placeholder="homeworkt_there_be.html">
-        </div>
-        <div>
-          <label class="block text-xs font-mono font-bold uppercase text-slate-500 mb-1">Task 5 URL Path:</label>
-          <input type="text" id="inputPath6" class="w-full p-2.5 border rounded-lg focus:outline-none focus:border-orangeAction bg-slate-50 font-mono text-xs" placeholder="homework_to_be.html">
-        </div>
-        <div>
-          <label class="block text-xs font-mono font-bold uppercase text-slate-500 mb-1">Task 6 URL Path:</label>
-          <input type="text" id="inputPath4" class="w-full p-2.5 border rounded-lg focus:outline-none focus:border-orangeAction bg-slate-50 font-mono text-xs" placeholder="diagnostic.html">
+      <div>
+        <label class="block text-xs font-mono font-bold uppercase text-slate-500 mb-1">Global 7-Day Challenge PDF URL/Path:</label>
+        <input type="text" id="inputGlobalPdf" class="w-full p-2.5 border rounded-lg focus:outline-none focus:border-orangeAction bg-slate-50 font-mono text-xs" placeholder="Cole o link do Google Drive aqui...">
+      </div>
+      <div class="space-y-3">
+        <span class="text-xs font-bold font-mono text-slate-600 uppercase block">Task URL Paths Management</span>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-7 gap-2">
+          <div>
+            <label class="block text-[10px] font-mono font-bold uppercase text-slate-500 mb-1">Task 1:</label>
+            <input type="text" id="inputPath1" class="w-full p-1.5 border rounded text-xs font-mono bg-white" placeholder="HTML Path">
+          </div>
+          <div>
+            <label class="block text-[10px] font-mono font-bold uppercase text-slate-500 mb-1">Task 2:</label>
+            <input type="text" id="inputPath2" class="w-full p-1.5 border rounded text-xs font-mono bg-white" placeholder="HTML Path">
+          </div>
+          <div>
+            <label class="block text-[10px] font-mono font-bold uppercase text-slate-500 mb-1">Task 3:</label>
+            <input type="text" id="inputPath3" class="w-full p-1.5 border rounded text-xs font-mono bg-white" placeholder="HTML Path">
+          </div>
+          <div>
+            <label class="block text-[10px] font-mono font-bold uppercase text-slate-500 mb-1">Task 4:</label>
+            <input type="text" id="inputPath5" class="w-full p-1.5 border rounded text-xs font-mono bg-white" placeholder="HTML Path">
+          </div>
+          <div>
+            <label class="block text-[10px] font-mono font-bold uppercase text-slate-500 mb-1">Task 5:</label>
+            <input type="text" id="inputPath6" class="w-full p-1.5 border rounded text-xs font-mono bg-white" placeholder="HTML Path">
+          </div>
+          <div>
+            <label class="block text-[10px] font-mono font-bold uppercase text-slate-500 mb-1">Task 6 (Buying):</label>
+            <input type="text" id="inputPath7" class="w-full p-1.5 border rounded text-xs font-mono bg-white" placeholder="homework_buying.html">
+          </div>
+          <div>
+            <label class="block text-[10px] font-mono font-bold uppercase text-slate-500 mb-1">Task 7 (Diag):</label>
+            <input type="text" id="inputPath4" class="w-full p-1.5 border rounded text-xs font-mono bg-white" placeholder="HTML Path">
+          </div>
         </div>
       </div>
     </div>
@@ -318,61 +354,62 @@
 
 <!-- ── ENGINE APPLICATION STATE & PERSISTENCE CORE ── -->
 <script>
-// State variable mapping
 let appState = {
   studentName: "Rafael",
+  globalPdf: "https://drive.google.com/file/d/1fCxwdTIr_Dn2YizQybsxTGMIZRZYjGI7/view?usp=sharing",
   tasks: {
     1: { completed: false, path: "order_homework.html" },
     2: { completed: false, path: "homework_to_for.html" },
     3: { completed: false, path: "homework_make_do.html" },
     5: { completed: false, path: "homeworkt_there_be.html" },
     6: { completed: false, path: "homework_to_be.html" },
+    7: { completed: false, path: "homework_buying.html" },
     4: { completed: false, path: "diagnostic.html" }
   }
 };
 
-// Toggle settings panel visibility
 function toggleTeacherSettings() {
   const panel = document.getElementById('teacherSettings');
   panel.classList.toggle('hidden');
 }
 
-// Save teacher customized values
 function saveTeacherSettings() {
   const nameVal = document.getElementById('inputStudentName').value.trim();
-  const path1 = document.getElementById('inputPath1').value.trim();
-  const path2 = document.getElementById('inputPath2').value.trim();
-  const path3 = document.getElementById('inputPath3').value.trim();
-  const path5 = document.getElementById('inputPath5').value.trim();
-  const path6 = document.getElementById('inputPath6').value.trim();
-  const path4 = document.getElementById('inputPath4').value.trim();
-
+  const pdfVal = document.getElementById('inputGlobalPdf').value.trim();
   if (nameVal) appState.studentName = nameVal;
-  if (path1) appState.tasks[1].path = path1;
-  if (path2) appState.tasks[2].path = path2;
-  if (path3) appState.tasks[3].path = path3;
-  if (path5) appState.tasks[5].path = path5;
-  if (path6) appState.tasks[6].path = path6;
-  if (path4) appState.tasks[4].path = path4;
+  if (pdfVal) appState.globalPdf = pdfVal;
+
+  [1, 2, 3, 5, 6, 7, 4].forEach(id => {
+    const pInput = document.getElementById(`inputPath${id}`);
+    if (pInput && pInput.value.trim()) appState.tasks[id].path = pInput.value.trim();
+  });
 
   localStorage.setItem('metodo_fala_rafael_hub_state', JSON.stringify(appState));
   syncDOM();
   toggleTeacherSettings();
 }
 
-// Toggle status switchers
 function toggleTaskStatus(taskId) {
   const checkbox = document.getElementById(`checkTask-${taskId}`);
   appState.tasks[taskId].completed = checkbox.checked;
-  
   localStorage.setItem('metodo_fala_rafael_hub_state', JSON.stringify(appState));
   syncDOM();
 }
 
-// Synchronize memory and UI layers
 function syncDOM() {
   document.getElementById('studentNameLabel').textContent = appState.studentName;
   document.getElementById('inputStudentName').value = appState.studentName;
+  document.getElementById('inputGlobalPdf').value = appState.globalPdf !== "#" ? appState.globalPdf : "";
+
+  // Gerenciamento do botão global de PDF no Header
+  const globalPdfBtn = document.getElementById('globalPdfButton');
+  if (appState.globalPdf && appState.globalPdf !== "#") {
+    globalPdfBtn.setAttribute('href', appState.globalPdf);
+    globalPdfBtn.style.display = 'inline-flex';
+  } else {
+    globalPdfBtn.setAttribute('href', '#');
+    globalPdfBtn.style.display = 'none';
+  }
 
   let totalTasks = Object.keys(appState.tasks).length;
   let completedCount = 0;
@@ -416,9 +453,10 @@ window.onload = function() {
   if (savedState) {
     try {
       appState = JSON.parse(savedState);
-      if (!appState.tasks[6]) {
-        appState.tasks[6] = { completed: false, path: "homework_to_be.html" };
+      if (!appState.tasks[7]) {
+        appState.tasks[7] = { completed: false, path: "homework_buying.html" };
       }
+      if (!appState.globalPdf) appState.globalPdf = "https://drive.google.com/file/d/1fCxwdTIr_Dn2YizQybsxTGMIZRZYjGI7/view?usp=sharing";
     } catch (e) {
       console.error("Failure restoring localized states.", e);
     }
